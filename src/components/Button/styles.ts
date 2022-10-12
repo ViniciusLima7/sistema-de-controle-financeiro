@@ -31,12 +31,13 @@ export const Botao = styled.button.attrs((props: PropTypeButton) => ({
   line-height: 24px;
   color: var(--white);
   cursor: pointer;
-  /* identical to box height */
 
   text-align: center;
   align-items: center;
 
   :hover {
     background: ${(props) => props.hoverBg};
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
   }
 `;

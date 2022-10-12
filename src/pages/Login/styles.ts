@@ -54,6 +54,8 @@ export const Registration = styled.p`
 
   :hover {
     color: var(--black);
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
   }
 `;
 
@@ -99,6 +101,8 @@ export const Text = styled.p`
 
   :hover {
     color: var(--white);
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
   }
 `;
 
@@ -134,7 +138,12 @@ export const Rodape = styled.h3`
   line-height: 29px;
 
   text-align: center;
-  padding-top: calc(100vh - 33%);
+  margin-top: calc(100vh - 32%);
 
-  color: var(--black); ;
+  color: var(--black);
+  :hover {
+    color: var(--white);
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+  }
 `;
