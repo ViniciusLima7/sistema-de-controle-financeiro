@@ -28,8 +28,8 @@ export function Login() {
             <TextLine>ou</TextLine>
           </Line>
           <Button
-            background="#FF0000"
-            hoverBg="#A00000"
+            background="var(--red-500)"
+            hoverBg="var(--red-800)"
             text="Entrar com Google"
           ></Button>
         </FormLogin>

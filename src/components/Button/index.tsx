@@ -9,8 +9,8 @@ export interface ButtonProps {
 
 export function Button({
   text = "Button",
-  background = "#00008b",
-  hoverBg = "#000049",
+  background = "var(--blue-600)",
+  hoverBg = "var(--blue-900)",
 }: ButtonProps) {
   return (
     <Botao background={background} hoverBg={hoverBg}>

@@ -1,4 +1,20 @@
 html, body{
 margin:0;
 padding:0;
+
+
+
+/* Default Colors */
+
+--black: #000000;
+--white: #FFFFFF;
+--blue-600: #00008B;
+--blue-900: #000049;
+--gray-100: #E6E6E6;
+--gray-500: #645F5F;
+--red-500: #FF0000;
+--red-800: #A00000;
+
+
+/* Default Colors */
 }

@@ -29,7 +29,7 @@ export const Botao = styled.button.attrs((props: PropTypeButton) => ({
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  color: #ffffff;
+  color: var(--white);
   cursor: pointer;
   /* identical to box height */
 

@@ -21,8 +21,8 @@ export const Title = styled.h1`
   font-size: 32px;
   line-height: 45px;
 
-  color: #ffffff;
-  -webkit-text-stroke: 2.2px #000000;
+  color: var(--white);
+  -webkit-text-stroke: 1.5px var(--black); ;
 `;
 
 export const SubTitle = styled.p`
@@ -34,7 +34,7 @@ export const SubTitle = styled.p`
   line-height: 34px;
   text-align: center;
 
-  color: #ffffff;
+  color: var(--white);
 `;
 
 export const Registration = styled.p`
@@ -50,10 +50,10 @@ export const Registration = styled.p`
   text-align: center;
   cursor: pointer;
 
-  color: #ffffff;
+  color: var(--white);
 
   :hover {
-    color: #000000;
+    color: var(--black);
   }
 `;
 
@@ -67,7 +67,7 @@ export const Input = styled.input`
   width: 400px;
   height: 72px;
   border-radius: 15px;
-  background: #ffffff;
+  background: var(--white);
   margin-bottom: 10px;
   padding-left: 15px;
   outline: none;
@@ -78,11 +78,11 @@ export const Input = styled.input`
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color: #645f5f;
+    color: var(--gray-500);
   }
 
   :focus {
-    border: 2px solid #00008b;
+    border: 2px solid var(--blue-600);
   }
 `;
 
@@ -95,10 +95,10 @@ export const Text = styled.p`
   line-height: 27px;
   cursor: pointer;
 
-  color: #000000;
+  color: var(--black);
 
   :hover {
-    color: #ffffff;
+    color: var(--white);
   }
 `;
 
@@ -111,7 +111,7 @@ export const Line = styled.div`
   /* Linha */
   ::before,
   ::after {
-    background-color: black;
+    background-color: var(--black);
     content: "";
     height: 1px;
     width: 150px;
@@ -136,5 +136,5 @@ export const Rodape = styled.h3`
   text-align: center;
   padding-top: calc(100vh - 33%);
 
-  color: #000000;
+  color: var(--black); ;
 `;
