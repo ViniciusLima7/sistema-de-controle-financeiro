@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import fundo from "../../assets/fundo.svg";
+import fundo from "../../assets/fundo.jpg";
 
 export const ContainerBG = styled.div`
   //Image
@@ -12,7 +12,7 @@ export const ContainerBG = styled.div`
 
 export const Title = styled.h1`
   margin: 0;
-  padding-top: 130px;
+  padding-top: 140px;
   text-align: center;
 
   font-family: "Jua";
@@ -139,11 +139,16 @@ export const Rodape = styled.h3`
 
   text-align: center;
   margin-top: calc(100vh - 32%);
+  cursor: pointer;
 
   color: var(--black);
   :hover {
     color: var(--white);
-    transition-duration: 0.1s;
+    transition-duration: 0.2s;
     transition-timing-function: linear;
   }
+`;
+
+export const Link = styled.a`
+  text-decoration: none;
 `;
