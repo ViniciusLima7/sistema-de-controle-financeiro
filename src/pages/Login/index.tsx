@@ -23,7 +23,7 @@ export function Login() {
           <Input placeholder="Digite seu email"></Input>
           <Input placeholder="Digite sua senha"></Input>
           <Text>Esqueceu a senha?</Text>
-          <Button background="#00008b" hoverBg="#000049" text="Entrar"></Button>
+          <Button text="Entrar"></Button>
           <Line>
             <TextLine>ou</TextLine>
           </Line>

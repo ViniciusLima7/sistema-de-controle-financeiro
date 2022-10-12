@@ -7,7 +7,11 @@ export interface ButtonProps {
   hoverBg?: string;
 }
 
-export function Button({ text, background, hoverBg }: ButtonProps) {
+export function Button({
+  text = "Button",
+  background = "#00008b",
+  hoverBg = "#000049",
+}: ButtonProps) {
   return (
     <Botao background={background} hoverBg={hoverBg}>
       {text === "Entrar com Google" ? <img src={iconGoogle}></img> : ""}
