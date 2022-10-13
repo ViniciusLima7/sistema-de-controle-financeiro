@@ -1,8 +1,10 @@
 import { Button } from "../../components/Button";
+import { Input } from "../../components/Input";
+import { Envelope, Lock } from "phosphor-react";
+
 import {
   ContainerBG,
   FormLogin,
-  Input,
   Line,
   Link,
   Registration,
@@ -12,7 +14,6 @@ import {
   TextLine,
   Title,
 } from "./styles";
-
 export function Login() {
   return (
     <ContainerBG>
@@ -20,8 +21,12 @@ export function Login() {
       <Title>SISTEMA DE CONTROLE FINANCEIRO</Title>
       <SubTitle>Faça login para continuar</SubTitle>
       <FormLogin>
-        <Input placeholder="Digite seu email"></Input>
-        <Input placeholder="Digite sua senha"></Input>
+        <Input
+          placeholder="Digite seu email"
+          type="email"
+          icon={<Envelope size={24} />}
+        />
+        <Input placeholder="Digite sua senha" icon={<Lock size={24} />}></Input>
         <Text>Esqueceu a senha?</Text>
         <Button text="Entrar"></Button>
         <Line>

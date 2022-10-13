@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
-type PropTypeButton = {
+interface PropButton {
   background: string;
   hoverBg: string;
-};
+}
 
-export const Botao = styled.button.attrs((props: PropTypeButton) => ({
+export const Botao = styled.button.attrs((props: PropButton) => ({
   background: props.background,
   hoverBg: props.hoverBg,
-}))<PropTypeButton>`
+}))<PropButton>`
   box-sizing: border-box;
 
   width: 249px;

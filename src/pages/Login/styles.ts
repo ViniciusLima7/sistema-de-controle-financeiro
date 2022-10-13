@@ -65,29 +65,6 @@ export const FormLogin = styled.div`
   align-items: center;
 `;
 
-export const Input = styled.input`
-  width: 400px;
-  height: 72px;
-  border-radius: 15px;
-  background: var(--white);
-  margin-bottom: 10px;
-  padding-left: 15px;
-  outline: none;
-
-  ::placeholder {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: var(--gray-500);
-  }
-
-  :focus {
-    border: 2px solid var(--blue-600);
-  }
-`;
-
 export const Text = styled.p`
   margin-top: 0;
   font-family: "Inter";
@@ -138,7 +115,7 @@ export const Rodape = styled.h3`
   line-height: 29px;
 
   text-align: center;
-  margin-top: calc(100vh - 32%);
+  margin-top: calc(100vh - 33%);
   cursor: pointer;
 
   color: var(--black);
