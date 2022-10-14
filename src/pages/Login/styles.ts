@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import fundo from "../../assets/fundo.jpg";
+import fundo from "../../assets/fundofigma.jpg";
 
 export const ContainerBG = styled.div`
   //Image
@@ -69,15 +69,15 @@ export const Text = styled.p`
   margin-top: 0;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 27px;
   cursor: pointer;
 
-  color: var(--black);
+  color: var(--white);
 
   :hover {
-    color: var(--white);
+    color: var(--black);
     transition-duration: 0.1s;
     transition-timing-function: linear;
   }
@@ -92,7 +92,7 @@ export const Line = styled.div`
   /* Linha */
   ::before,
   ::after {
-    background-color: var(--black);
+    background-color: var(--white);
     content: "";
     height: 1px;
     width: 150px;
@@ -102,15 +102,16 @@ export const Line = styled.div`
 export const TextLine = styled.span`
   font-family: "Inter";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 200;
   font-size: 16px;
   padding: 0 16px;
+  color: var(--white);
 `;
 
 export const Rodape = styled.h3`
   font-family: "JetBrains Mono";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 22px;
   line-height: 29px;
 
@@ -118,9 +119,9 @@ export const Rodape = styled.h3`
   margin-top: calc(100vh - 33%);
   cursor: pointer;
 
-  color: var(--black);
+  color: var(--white);
   :hover {
-    color: var(--white);
+    color: var(--black);
     transition-duration: 0.2s;
     transition-timing-function: linear;
   }
