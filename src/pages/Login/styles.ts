@@ -53,7 +53,7 @@ export const Registration = styled.p`
   color: var(--white);
 
   :hover {
-    color: var(--black);
+    color: var(--gray-500);
     transition-duration: 0.1s;
     transition-timing-function: linear;
   }
@@ -77,7 +77,7 @@ export const Text = styled.p`
   color: var(--white);
 
   :hover {
-    color: var(--black);
+    color: var(--gray-500);
     transition-duration: 0.1s;
     transition-timing-function: linear;
   }
@@ -121,7 +121,7 @@ export const Rodape = styled.h3`
 
   color: var(--white);
   :hover {
-    color: var(--black);
+    color: var(--gray-500);
     transition-duration: 0.2s;
     transition-timing-function: linear;
   }
