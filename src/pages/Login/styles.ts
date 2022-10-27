@@ -22,7 +22,14 @@ export const Title = styled.h1`
   line-height: 45px;
 
   color: var(--white);
-  -webkit-text-stroke: 1.5px var(--black); ;
+  -webkit-text-stroke: 1.5px var(--black);
+
+  @media screen and (max-width: 1280px) {
+    font-size: 24px;
+    padding-top: 100px;
+    line-height: 35px;
+    -webkit-text-stroke: 1px var(--black);
+  }
 `;
 
 export const SubTitle = styled.p`
@@ -35,6 +42,11 @@ export const SubTitle = styled.p`
   text-align: center;
 
   color: var(--white);
+
+  @media screen and (max-width: 1280px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
 `;
 
 export const Registration = styled.p`
@@ -56,6 +68,11 @@ export const Registration = styled.p`
     color: var(--gray-500);
     transition-duration: 0.1s;
     transition-timing-function: linear;
+  }
+
+  @media screen and (max-width: 1280px) {
+    font-size: 16px;
+    line-height: 20px;
   }
 `;
 
@@ -81,6 +98,10 @@ export const Text = styled.p`
     transition-duration: 0.1s;
     transition-timing-function: linear;
   }
+  @media screen and (max-width: 1280px) {
+    font-size: 12px;
+    line-height: 17px;
+  }
 `;
 
 export const Line = styled.div`
@@ -97,6 +118,13 @@ export const Line = styled.div`
     height: 1px;
     width: 150px;
   }
+
+  @media screen and (max-width: 1280px) {
+    ::before,
+    ::after {
+      width: 120px;
+    }
+  }
 `;
 
 export const TextLine = styled.span`
@@ -106,6 +134,10 @@ export const TextLine = styled.span`
   font-size: 16px;
   padding: 0 16px;
   color: var(--white);
+
+  @media screen and (max-width: 1280px) {
+    font-size: 12px;
+  }
 `;
 
 export const Rodape = styled.h3`
@@ -116,7 +148,7 @@ export const Rodape = styled.h3`
   line-height: 29px;
 
   text-align: center;
-  margin-top: calc(100vh - 33%);
+  /* margin-top: calc(100vh - 33%); */
   cursor: pointer;
 
   color: var(--white);
@@ -124,6 +156,18 @@ export const Rodape = styled.h3`
     color: var(--gray-500);
     transition-duration: 0.2s;
     transition-timing-function: linear;
+  }
+
+  position: fixed;
+  left: 34%;
+  bottom: 20px;
+  @media screen and (max-width: 1280px) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @media screen and (min-width: 2300px) {
+    left: 38%;
   }
 `;
 

@@ -40,4 +40,10 @@ export const Botao = styled.button.attrs((props: PropButton) => ({
     transition-duration: 0.1s;
     transition-timing-function: linear;
   }
+
+  @media screen and (max-width: 1280px) {
+    width: 190px;
+    height: 35px;
+    font-size: 14px;
+  }
 `;

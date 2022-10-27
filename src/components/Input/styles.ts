@@ -15,7 +15,6 @@ export const InputStyle = styled.input`
 
   font-family: "Inter";
   font-style: normal;
-  font-size: 16px;
   font-weight: 500;
   line-height: 19px;
 
@@ -29,6 +28,13 @@ export const InputStyle = styled.input`
     padding-left: 47px;
     background-color: transparent;
   }
+
+  @media screen and (max-width: 1280px) {
+    width: 270px;
+    height: 50px;
+    font-size: 12px;
+    line-height: 12px;
+  }
 `;
 
 export const Label = styled.label`
@@ -41,4 +47,9 @@ export const Label = styled.label`
   display: flex;
   align-items: center;
   outline: none;
+
+  @media screen and (max-width: 1280px) {
+    width: 306px;
+    height: 56px;
+  }
 `;
