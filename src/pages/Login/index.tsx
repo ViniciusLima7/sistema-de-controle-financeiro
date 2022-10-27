@@ -26,7 +26,11 @@ export function Login() {
           type="email"
           icon={<Envelope size={24} />}
         />
-        <Input placeholder="Digite sua senha" icon={<Lock size={24} />}></Input>
+        <Input
+          placeholder="Digite sua senha"
+          type="password"
+          icon={<Lock size={24} />}
+        ></Input>
         <Text>Esqueceu a senha?</Text>
         <Button text="Entrar"></Button>
         <Line>

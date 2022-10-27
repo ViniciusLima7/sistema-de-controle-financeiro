@@ -11,6 +11,7 @@ export const InputStyle = styled.input`
   font-size: 16px;
   padding-bottom: 5px;
   padding-left: 8px;
+  padding-right: 10px;
 
   font-family: "Inter";
   font-style: normal;
