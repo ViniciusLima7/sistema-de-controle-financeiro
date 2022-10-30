@@ -13,11 +13,11 @@ import {
   TextLine,
   Title,
 } from "./styles";
-import { ModalA } from "../../components/Modal";
+import { Modal } from "../../components/Modal";
 export function Login() {
   return (
     <ContainerBG>
-      <ModalA />
+      <Modal />
       <Title>SISTEMA DE CONTROLE FINANCEIRO</Title>
       <SubTitle>Faça login para continuar</SubTitle>
       <FormLogin>

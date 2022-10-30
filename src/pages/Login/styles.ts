@@ -9,6 +9,10 @@ interface PropTextLine {
   color?: string;
 }
 
+interface PropRodape {
+  top?: string;
+}
+
 export const ContainerBG = styled.div`
   //Image
   width: 100vw;
@@ -152,7 +156,9 @@ export const TextLine = styled.span.attrs((props: PropTextLine) => ({
   }
 `;
 
-export const Rodape = styled.h3`
+export const Rodape = styled.h3.attrs(({ top = "91%" }: PropRodape) => ({
+  top: top,
+}))<PropRodape>`
   font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 400;
@@ -170,7 +176,7 @@ export const Rodape = styled.h3`
   }
 
   position: absolute;
-  top: 90%;
+  top: ${({ top }) => top};
   left: 50%;
   transform: translate(-50%, 0);
 
