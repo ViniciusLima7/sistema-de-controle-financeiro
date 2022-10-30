@@ -1,6 +1,5 @@
 import * as React from "react";
-// import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
+import Container from "@mui/material/Modal";
 import { Registration } from "../../pages/Login/styles";
 import { Box, Subtitle, Text, Link, Title } from "./styles";
 import { Input } from "../Input";
@@ -8,16 +7,14 @@ import { Line, TextLine } from "../../pages/Login/styles";
 import { Button } from "../../components/Button";
 import { Envelope, Lock, User } from "phosphor-react";
 
-//   transform: "translate(-50%, -50%)",
-
-export function ModalA() {
+export function Modal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   return (
     <>
       <Registration onClick={handleOpen}>Cadastre-se Agora</Registration>
-      <Modal
+      <Container
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -59,7 +56,7 @@ export function ModalA() {
             Já Se cadastrou? <Link>Entre</Link>
           </Text>
         </Box>
-      </Modal>
+      </Container>
     </>
   );
 }
