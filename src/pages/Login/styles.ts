@@ -160,7 +160,6 @@ export const Rodape = styled.h3`
   line-height: 29px;
 
   text-align: center;
-  /* margin-top: calc(100vh - 33%); */
   cursor: pointer;
 
   color: var(--white);
@@ -170,9 +169,11 @@ export const Rodape = styled.h3`
     transition-timing-function: linear;
   }
 
-  position: fixed;
-  left: 34%;
-  bottom: 20px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
   @media screen and (max-width: 1280px) {
     font-size: 14px;
     line-height: 17px;
