@@ -14,15 +14,10 @@ export function Modal() {
   return (
     <>
       <Registration onClick={handleOpen}>Cadastre-se Agora</Registration>
-      <Container
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
+      <Container open={open} onClose={handleClose}>
         <Box>
-          <Title id="modal-modal-title">Cadastre-se</Title>
-          <Subtitle id="modal-modal-description">É rápido e fácil.</Subtitle>
+          <Title>Cadastre-se</Title>
+          <Subtitle>É rápido e fácil.</Subtitle>
           <Input icon={<User size={24} />} placeholder="Nome Completo" />
           <Input icon={<User size={24} />} placeholder="Nome Exibido" />
           <Input

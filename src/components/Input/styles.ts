@@ -47,7 +47,6 @@ export const InputStyle = styled.input.attrs((props: PropInput) => ({
     width: 270px;
     height: 50px;
     font-size: 12px;
-    /* line-height: 12px; */
   }
 `;
 
