@@ -3,16 +3,20 @@ import styled from "styled-components";
 interface PropButton {
   background: string;
   hoverBg: string;
+  width: string;
+  height: string;
 }
 
 export const Botao = styled.button.attrs((props: PropButton) => ({
   background: props.background,
   hoverBg: props.hoverBg,
+  width: props.width,
+  height: props.height,
 }))<PropButton>`
   box-sizing: border-box;
 
-  width: 249px;
-  height: 40px;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   padding: 8px 0;
 
   display: flex;
@@ -33,7 +37,6 @@ export const Botao = styled.button.attrs((props: PropButton) => ({
   cursor: pointer;
 
   text-align: center;
-  align-items: center;
 
   :hover {
     background: ${(props) => props.hoverBg};
@@ -42,8 +45,8 @@ export const Botao = styled.button.attrs((props: PropButton) => ({
   }
 
   @media screen and (max-width: 1280px) {
-    width: 190px;
-    height: 35px;
+    width: ${(props) => props.width};
+    height: ${(props) => props.height};
     font-size: 14px;
   }
 `;

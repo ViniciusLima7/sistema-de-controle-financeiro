@@ -1,8 +1,22 @@
 import styled from "styled-components";
 
-export const InputStyle = styled.input`
-  width: 364px;
-  height: 66px;
+interface PropInput {
+  width?: string;
+  height?: string;
+}
+
+interface PropLabel {
+  widthLabel?: string;
+  heightLabel?: string;
+  marginBottom?: string;
+}
+
+export const InputStyle = styled.input.attrs((props: PropInput) => ({
+  width: props.width,
+  height: props.height,
+}))<PropInput>`
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   outline: none;
   border-color: var(--white);
   border: none;
@@ -11,7 +25,7 @@ export const InputStyle = styled.input`
   font-size: 16px;
   padding-bottom: 5px;
   padding-left: 8px;
-  padding-right: 10px;
+  padding-right: 20px;
 
   font-family: "Inter";
   font-style: normal;
@@ -33,16 +47,20 @@ export const InputStyle = styled.input`
     width: 270px;
     height: 50px;
     font-size: 12px;
-    line-height: 12px;
+    /* line-height: 12px; */
   }
 `;
 
-export const Label = styled.label`
-  width: 400px;
-  height: 72px;
+export const Label = styled.label.attrs((props: PropLabel) => ({
+  width: props.widthLabel,
+  height: props.heightLabel,
+  marginBottom: props.marginBottom,
+}))<PropLabel>`
+  width: ${(props) => props.widthLabel};
+  height: ${(props) => props.heightLabel};
   border-radius: 15px;
   background: var(--white);
-  margin-bottom: 10px;
+  margin-bottom: ${(props) => props.marginBottom};
   padding-left: 15px;
   display: flex;
   align-items: center;

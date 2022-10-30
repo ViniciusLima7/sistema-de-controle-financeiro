@@ -1,6 +1,14 @@
 import styled from "styled-components";
 import fundo from "../../assets/fundofigma.jpg";
 
+interface PropLine {
+  color?: string;
+}
+
+interface PropTextLine {
+  color?: string;
+}
+
 export const ContainerBG = styled.div`
   //Image
   width: 100vw;
@@ -104,7 +112,9 @@ export const Text = styled.p`
   }
 `;
 
-export const Line = styled.div`
+export const Line = styled.div.attrs((props: PropLine) => ({
+  color: props.color,
+}))<PropLine>`
   display: flex;
   flex-direction: row;
   padding: 8px;
@@ -113,7 +123,7 @@ export const Line = styled.div`
   /* Linha */
   ::before,
   ::after {
-    background-color: var(--white);
+    background-color: ${(props) => props.color};
     content: "";
     height: 1px;
     width: 150px;
@@ -127,13 +137,15 @@ export const Line = styled.div`
   }
 `;
 
-export const TextLine = styled.span`
+export const TextLine = styled.span.attrs((props: PropTextLine) => ({
+  color: props.color,
+}))<PropTextLine>`
   font-family: "Inter";
   font-style: normal;
   font-weight: 200;
   font-size: 16px;
   padding: 0 16px;
-  color: var(--white);
+  color: ${(props) => props.color};
 
   @media screen and (max-width: 1280px) {
     font-size: 12px;

@@ -7,17 +7,17 @@ import {
   FormLogin,
   Line,
   Link,
-  Registration,
   Rodape,
   SubTitle,
   Text,
   TextLine,
   Title,
 } from "./styles";
+import { ModalA } from "../../components/Modal";
 export function Login() {
   return (
     <ContainerBG>
-      <Registration>Cadastre-se Agora</Registration>
+      <ModalA />
       <Title>SISTEMA DE CONTROLE FINANCEIRO</Title>
       <SubTitle>Faça login para continuar</SubTitle>
       <FormLogin>
@@ -25,16 +25,26 @@ export function Login() {
           placeholder="Digite seu email"
           type="email"
           icon={<Envelope size={24} />}
+          width="364px"
+          height="66px"
+          widthLabel="400px"
+          heightLabel="72px"
+          marginBottom="10px"
         />
         <Input
           placeholder="Digite sua senha"
           type="password"
           icon={<Lock size={24} />}
+          width="364px"
+          height="66px"
+          widthLabel="400px"
+          heightLabel="72px"
+          marginBottom="10px"
         ></Input>
         <Text>Esqueceu a senha?</Text>
         <Button text="Entrar"></Button>
-        <Line>
-          <TextLine>ou</TextLine>
+        <Line color="var(--white)">
+          <TextLine color="var(--white);">ou</TextLine>
         </Line>
         <Button
           background="var(--red-500)"
