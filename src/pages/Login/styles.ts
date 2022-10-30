@@ -178,10 +178,6 @@ export const Rodape = styled.h3`
     font-size: 14px;
     line-height: 17px;
   }
-
-  @media screen and (min-width: 2300px) {
-    left: 38%;
-  }
 `;
 
 export const Link = styled.a`
