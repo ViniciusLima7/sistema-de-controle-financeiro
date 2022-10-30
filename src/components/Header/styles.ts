@@ -7,7 +7,7 @@ export const Container = styled.div`
   background: var(--blue-600);
 
   @media screen and (max-width: 1280px) {
-    height: 120px;
+    height: 110px;
   }
 `;
 
@@ -24,8 +24,8 @@ export const Title = styled.h1`
   color: var(--white);
   -webkit-text-stroke: 1px var(--black);
   @media screen and (max-width: 1280px) {
-    font-size: 28px;
-    line-height: 20px;
+    font-size: 26px;
+    line-height: 16px;
   }
 `;
 

@@ -46,7 +46,11 @@ export const Text = styled.p.attrs((props: PropText) => ({
 
   @media screen and (max-width: 1280px) {
     font-size: calc(${(props) => props.size} - 6px);
-    padding-top: calc(${(props) => props.paddingTop} - 85px);
+    padding-top: calc(${(props) => props.paddingTop} - 87px);
+  }
+
+  @media screen and (min-width: 1921px) {
+    padding-top: calc(${(props) => props.paddingTop} - 18.5px);
   }
 `;
 
@@ -61,6 +65,7 @@ export const Image = styled.img`
   width: 650px;
   margin-top: -310px;
   margin-left: -220px;
+  padding-bottom: 10px;
   @media screen and (max-width: 1280px) {
     width: 450px;
     margin-left: -120px;
