@@ -1,28 +1,5 @@
 import styled from "styled-components";
 
-export const Section = styled.section`
-  position: absolute;
-  width: 1156px;
-  height: 183px;
-
-  display: flex;
-  background: var(--white);
-  margin-top: -30px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
-  box-sizing: border-box;
-  border-radius: 24px;
-  padding: 20px;
-
-  transform: translate(-50%);
-  left: 50%;
-
-  @media screen and (max-width: 1280px) {
-    width: 900px;
-    margin-top: -18px;
-    height: 163px;
-  }
-`;
-
 export const MonthArea = styled.div`
   flex: 1;
   display: flex;

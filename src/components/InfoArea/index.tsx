@@ -1,16 +1,11 @@
 import ResumeItem from "../ResumeItem";
-import {
-  MonthArea,
-  MonthArrow,
-  MonthTitle,
-  ResumeArea,
-  Section,
-} from "./styles";
+import { MonthArea, MonthArrow, MonthTitle, ResumeArea } from "./styles";
 
 import deposito from "../../assets/deposito.png";
 import retirada from "../../assets/retirada.png";
 import saldo from "../../assets/saldo.png";
 import cofrinho from "../../assets/cofrinho.svg";
+import Section from "../Section";
 
 interface InfoProps {
   currentMonth?: string;
