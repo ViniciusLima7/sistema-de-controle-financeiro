@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+interface PropLogo {
+  width?: string;
+  height?: string;
+  marginLeft?: string;
+}
+
 export const Container = styled.div`
   flex: 1;
 `;
@@ -20,15 +26,21 @@ export const Title = styled.div`
   }
 `;
 
-export const Logo = styled.img`
-  margin-left: 38%; //corrigir
-  height: 59px;
-  width: 59px;
+export const Logo = styled.img.attrs(
+  ({ width = "59px", height = "59px", marginLeft = "38%" }: PropLogo) => ({
+    width,
+    height,
+    marginLeft,
+  })
+)<PropLogo>`
+  margin-left: ${({ marginLeft }) => marginLeft}; //corrigir
+  height: ${({ height }) => height};
+  width: ${({ width }) => width};
 
   @media screen and (max-width: 1280px) {
-    margin-left: 42%; //corrigir
-    height: 35px;
-    width: 35px;
+    margin-left: calc(${({ marginLeft }) => marginLeft} - 4%); //corrigir
+    height: calc(${({ height }) => height} - 24px);
+    width: calc(${({ height }) => height} - 24px);
   }
 
   @media (max-width: 768px) {
