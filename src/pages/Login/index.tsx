@@ -43,8 +43,8 @@ export function Login() {
         ></Input>
         <Text>Esqueceu a senha?</Text>
         <Button text="Entrar"></Button>
-        <Line color="var(--white)">
-          <TextLine color="var(--white);">ou</TextLine>
+        <Line color="var(--white-100)">
+          <TextLine color="var(--white-100);">ou</TextLine>
         </Line>
         <Button
           background="var(--red-500)"

@@ -8,7 +8,7 @@ export const Box = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
-  background-color: var(--white);
+  background-color: var(--white-100);
   box-shadow: 24px;
   border-radius: 88px;
   padding: 4px;

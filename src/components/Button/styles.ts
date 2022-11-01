@@ -33,7 +33,7 @@ export const Botao = styled.button.attrs((props: PropButton) => ({
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  color: var(--white);
+  color: var(--white-100);
   cursor: pointer;
 
   text-align: center;

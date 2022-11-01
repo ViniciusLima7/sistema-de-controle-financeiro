@@ -21,7 +21,7 @@ export const Title = styled.h1`
   margin-right: 10px;
   padding-top: 27px;
   text-align: center;
-  color: var(--white);
+  color: var(--white-100);
   -webkit-text-stroke: 1px var(--black);
   @media screen and (max-width: 1280px) {
     font-size: 26px;
@@ -51,7 +51,7 @@ export const Text = styled.span`
   line-height: 23px;
   margin-right: 16px;
   margin-top: 4px;
-  color: var(--white);
+  color: var(--white-100);
   cursor: pointer;
 
   @media screen and (max-width: 1280px) {

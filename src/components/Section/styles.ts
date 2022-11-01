@@ -16,7 +16,7 @@ export const Container = styled.section.attrs(
   width: ${({ width }) => width};
 
   display: flex;
-  background: var(--white);
+  background: var(--white-100);
   margin-top: -30px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
