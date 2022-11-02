@@ -5,9 +5,7 @@ import { Container, TableHeadColumn } from "./styles";
 export default function TableArea() {
   return (
     <Container>
-      <div>
-        <Button text="+ Novo Cadastro" width="200px" marginBottom="20px" />
-      </div>
+      <Button text="+ Novo Cadastro" width="200px" marginBottom="20px" />
       <table>
         <thead>
           <tr>
@@ -17,13 +15,12 @@ export default function TableArea() {
             <TableHeadColumn width="250px">Título</TableHeadColumn>
             <TableHeadColumn width="100px">Preço</TableHeadColumn>
             <TableHeadColumn width="180px">Responsável</TableHeadColumn>
-            <TableHeadColumn>Ações</TableHeadColumn>
+            <TableHeadColumn width="100px">Ações</TableHeadColumn>
           </tr>
         </thead>
         <tbody>
           <TableItem />
         </tbody>
-        <div></div>
       </table>
     </Container>
   );

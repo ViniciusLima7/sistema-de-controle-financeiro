@@ -11,7 +11,11 @@ export default function TableItem() {
         <TableRow>Burguer King</TableRow>
         <TableRow>R$ 50</TableRow>
         <TableRow>Vinicius</TableRow>
-        <TableRow>
+        <TableRow
+          justifyContent="space-evenly"
+          display="flex"
+          marginLeft="-20px"
+        >
           <Pencil size={24} color="var(--black)" />
           <Trash size={24} color="var(--red-500)" />
         </TableRow>
@@ -23,7 +27,11 @@ export default function TableItem() {
         <TableRow>Subway</TableRow>
         <TableRow>R$ 40</TableRow>
         <TableRow>Daiani</TableRow>
-        <TableRow>
+        <TableRow
+          justifyContent="space-evenly"
+          display="flex"
+          marginLeft="-20px"
+        >
           <Pencil size={24} color="var(--black)" />
           <Trash size={24} color="var(--red-500)" />
         </TableRow>
