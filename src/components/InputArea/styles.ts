@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   position: absolute;
   width: 1156px;
-  height: 183px;
+  height: 133px;
 
   display: flex;
   background: var(--white-100);
@@ -21,7 +21,7 @@ export const Container = styled.div`
   @media screen and (max-width: 1280px) {
     width: 900px;
     margin-top: -18px;
-    height: 163px;
+    height: 113px;
     top: 20rem;
   }
 `;
@@ -101,15 +101,24 @@ export const Input = styled.input`
 export const Select = styled.select`
   width: 100%;
   height: 30px;
-  padding: 0 5px;
+  padding: 0 1px;
   border: 1px solid lightblue;
   border-radius: 5px;
+  font-family: "JetBrains Mono";
 
-  @media (max-width: 768px) {
+  :focus {
+    border: 2px solid var(--blue-600);
+  }
+
+  @media screen and (max-width: 768px) {
     width: 110%;
   }
 
-  @media (max-width: 650px) {
+  @media screen and (max-width: 1280px) {
+    font-size: 11px;
+  }
+
+  @media screen and (max-width: 650px) {
     width: 60px;
     font-size: 10px;
   }
