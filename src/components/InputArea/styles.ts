@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   display: flex;
   background: var(--white-100);
-  margin-top: -30px;
+  margin-top: -50px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   border-radius: 24px;
@@ -20,7 +20,6 @@ export const Container = styled.div`
 
   @media screen and (max-width: 1280px) {
     width: 900px;
-    margin-top: -18px;
     height: 113px;
     top: 20rem;
   }
@@ -39,7 +38,7 @@ export const InputLabel = styled.label`
   }
 `;
 
-export const InputTitle = styled.div`
+export const Title = styled.div`
   font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 700;

@@ -1,43 +1,36 @@
 import React from "react";
 import { Button } from "../Button";
-import {
-  Container,
-  Input,
-  InputLabel,
-  InputTitle,
-  Option,
-  Select,
-} from "./styles";
+import { Container, Input, InputLabel, Title, Option, Select } from "./styles";
 
 export default function InputArea() {
   return (
     <Container>
       <InputLabel>
-        <InputTitle>Data</InputTitle>
+        <Title>Data</Title>
         <Input type="date"></Input>
       </InputLabel>
       <InputLabel>
-        <InputTitle>Categoria </InputTitle>
+        <Title>Categoria </Title>
         <Select>
           <Option>-Selecione-</Option>
         </Select>
       </InputLabel>
       <InputLabel>
-        <InputTitle>SubCategoria</InputTitle>
+        <Title>SubCategoria</Title>
         <Select>
           <Option>-Selecione-</Option>
         </Select>
       </InputLabel>
       <InputLabel>
-        <InputTitle>Título</InputTitle>
+        <Title>Título</Title>
         <Input placeholder="Título"></Input>
       </InputLabel>
       <InputLabel>
-        <InputTitle>Preço</InputTitle>
+        <Title>Preço</Title>
         <Input placeholder="Preço"></Input>
       </InputLabel>
       <InputLabel>
-        <InputTitle>Responsável</InputTitle>
+        <Title>Responsável</Title>
         <Select>
           <Option>-Selecione-</Option>
         </Select>
