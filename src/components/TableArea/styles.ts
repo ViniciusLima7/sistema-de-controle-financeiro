@@ -38,25 +38,10 @@ export const TableHeadColumn = styled.th<{ width?: string }>`
 
   @media screen and (max-width: 1280px) {
     font-size: 16px;
+    width: calc(${(props) => props.width} - 10px);
   }
 
   @media (max-width: 768px) {
     font-size: 13px;
-  }
-`;
-
-export const TableRow = styled.td`
-  padding: 10px 0;
-  font-family: "JetBrains Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
-
-  @media screen and (max-width: 1280px) {
-    font-size: 14px;
-  }
-  @media (max-width: 768px) {
-    font-size: 11px;
   }
 `;
