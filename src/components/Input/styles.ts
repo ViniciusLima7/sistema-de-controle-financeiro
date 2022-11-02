@@ -44,7 +44,7 @@ export const InputStyle = styled.input.attrs((props: PropInput) => ({
   }
 
   @media screen and (max-width: 1280px) {
-    width: 270px;
+    width: calc(${(props) => props.width} - 20px);
     height: 50px;
     font-size: 12px;
   }

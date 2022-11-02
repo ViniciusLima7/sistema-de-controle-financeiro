@@ -1,5 +1,6 @@
-import { Botao } from "./styles";
+import { Botao, Text } from "./styles";
 import iconGoogle from "../../assets/google-icon.svg";
+import search from "../../assets/search.svg";
 
 export interface ButtonProps {
   text: string;
@@ -7,6 +8,10 @@ export interface ButtonProps {
   hoverBg?: string;
   width?: string;
   height?: string;
+  paddingLeft?: string;
+  justifyContent?: string;
+  marginTop?: string;
+  borderRadius?: string;
 }
 
 export function Button({
@@ -15,6 +20,10 @@ export function Button({
   hoverBg = "var(--blue-900)",
   width = "249px",
   height = "40px",
+  paddingLeft = "0",
+  justifyContent = "space-evenly",
+  marginTop,
+  borderRadius = "10px",
 }: ButtonProps) {
   return (
     <Botao
@@ -22,13 +31,18 @@ export function Button({
       hoverBg={hoverBg}
       width={width}
       height={height}
+      justifyContent={justifyContent}
+      marginTop={marginTop}
+      borderRadius={borderRadius}
     >
       {text === "Entrar com Google" || text === "Continuar com o Google" ? (
         <img src={iconGoogle}></img>
+      ) : text === "Buscar" ? (
+        <img src={search}></img>
       ) : (
         ""
       )}
-      <p>{text}</p>
+      <Text paddingLeft={paddingLeft}>{text}</Text>
     </Botao>
   );
 }
