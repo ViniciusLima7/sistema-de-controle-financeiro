@@ -7,6 +7,7 @@ interface PropButton {
   height: string;
   justifyContent: string;
   marginTop: string;
+  marginBottom: string;
   borderRadius: string;
 }
 
@@ -21,6 +22,7 @@ export const Botao = styled.button.attrs((props: PropButton) => ({
   height: props.height,
   justifyContent: props.justifyContent,
   marginTop: props.marginTop,
+  marginBottom: props.marginBottom,
   borderRadius: props.borderRadius,
 }))<PropButton>`
   box-sizing: border-box;
@@ -34,6 +36,7 @@ export const Botao = styled.button.attrs((props: PropButton) => ({
   justify-content: ${(props) => props.justifyContent};
   align-items: center;
   margin-top: ${(props) => props.marginTop};
+  margin-bottom: ${(props) => props.marginBottom};
 
   background: ${(props) => props.background};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

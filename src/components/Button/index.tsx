@@ -11,6 +11,7 @@ export interface ButtonProps {
   paddingLeft?: string;
   justifyContent?: string;
   marginTop?: string;
+  marginBottom?: string;
   borderRadius?: string;
 }
 
@@ -23,6 +24,7 @@ export function Button({
   paddingLeft = "0",
   justifyContent = "space-evenly",
   marginTop,
+  marginBottom,
   borderRadius = "10px",
 }: ButtonProps) {
   return (
@@ -33,6 +35,7 @@ export function Button({
       height={height}
       justifyContent={justifyContent}
       marginTop={marginTop}
+      marginBottom={marginBottom}
       borderRadius={borderRadius}
     >
       {text === "Entrar com Google" || text === "Continuar com o Google" ? (
