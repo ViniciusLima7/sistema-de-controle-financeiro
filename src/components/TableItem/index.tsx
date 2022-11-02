@@ -1,40 +1,32 @@
 import { Pencil, Trash } from "phosphor-react";
-import { TableRow } from "./styles";
+import Row from "../Row";
 
 export default function TableItem() {
   return (
     <>
       <tr>
-        <TableRow>20/11/2022</TableRow>
-        <TableRow>Alimentação</TableRow>
-        <TableRow>Fast-Food</TableRow>
-        <TableRow>Burguer King</TableRow>
-        <TableRow>R$ 50</TableRow>
-        <TableRow>Vinicius</TableRow>
-        <TableRow
-          justifyContent="space-evenly"
-          display="flex"
-          marginLeft="-20px"
-        >
+        <Row>20/11/2022</Row>
+        <Row>Alimentação</Row>
+        <Row>Fast-Food</Row>
+        <Row>Burguer King</Row>
+        <Row>R$ 50</Row>
+        <Row>Vinicius</Row>
+        <Row justifyContent="space-evenly" display="flex" marginLeft="-20px">
           <Pencil size={24} color="var(--black)" />
           <Trash size={24} color="var(--red-500)" />
-        </TableRow>
+        </Row>
       </tr>
       <tr>
-        <TableRow>20/12/2022</TableRow>
-        <TableRow>Alimentação</TableRow>
-        <TableRow>Fast-Food</TableRow>
-        <TableRow>Subway</TableRow>
-        <TableRow>R$ 40</TableRow>
-        <TableRow>Daiani</TableRow>
-        <TableRow
-          justifyContent="space-evenly"
-          display="flex"
-          marginLeft="-20px"
-        >
+        <Row>20/12/2022</Row>
+        <Row>Alimentação</Row>
+        <Row>Fast-Food</Row>
+        <Row>Subway</Row>
+        <Row>R$ 40</Row>
+        <Row>Daiani</Row>
+        <Row justifyContent="space-evenly" display="flex" marginLeft="-20px">
           <Pencil size={24} color="var(--black)" />
           <Trash size={24} color="var(--red-500)" />
-        </TableRow>
+        </Row>
       </tr>
     </>
   );
