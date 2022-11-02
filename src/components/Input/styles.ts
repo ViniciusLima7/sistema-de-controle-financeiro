@@ -18,9 +18,9 @@ export const InputStyle = styled.input.attrs((props: PropInput) => ({
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   outline: none;
-  border-color: var(--white);
+  border-color: var(--white-100);
   border: none;
-  background: var(--white);
+  background: var(--white-100);
   border-radius: 15px;
   font-size: 16px;
   padding-bottom: 5px;
@@ -44,7 +44,7 @@ export const InputStyle = styled.input.attrs((props: PropInput) => ({
   }
 
   @media screen and (max-width: 1280px) {
-    width: 270px;
+    width: calc(${(props) => props.width} - 20px);
     height: 50px;
     font-size: 12px;
   }
@@ -58,7 +58,7 @@ export const Label = styled.label.attrs((props: PropLabel) => ({
   width: ${(props) => props.widthLabel};
   height: ${(props) => props.heightLabel};
   border-radius: 15px;
-  background: var(--white);
+  background: var(--white-100);
   margin-bottom: ${(props) => props.marginBottom};
   padding-left: 15px;
   display: flex;

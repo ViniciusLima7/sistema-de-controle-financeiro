@@ -33,7 +33,7 @@ export const Title = styled.h1`
   font-size: 32px;
   line-height: 45px;
 
-  color: var(--white);
+  color: var(--white-100);
   -webkit-text-stroke: 1.5px var(--black);
 
   @media screen and (max-width: 1280px) {
@@ -53,7 +53,7 @@ export const SubTitle = styled.p`
   line-height: 34px;
   text-align: center;
 
-  color: var(--white);
+  color: var(--white-100);
 
   @media screen and (max-width: 1280px) {
     font-size: 16px;
@@ -74,7 +74,7 @@ export const Registration = styled.p`
   text-align: center;
   cursor: pointer;
 
-  color: var(--white);
+  color: var(--white-100);
 
   :hover {
     color: var(--gray-500);
@@ -103,7 +103,7 @@ export const Text = styled.p`
   line-height: 27px;
   cursor: pointer;
 
-  color: var(--white);
+  color: var(--white-100);
 
   :hover {
     color: var(--gray-500);
@@ -168,7 +168,7 @@ export const Rodape = styled.h3.attrs(({ top = "91%" }: PropRodape) => ({
   text-align: center;
   cursor: pointer;
 
-  color: var(--white);
+  color: var(--white-100);
   :hover {
     color: var(--gray-500);
     transition-duration: 0.2s;

@@ -5,6 +5,14 @@ interface PropButton {
   hoverBg: string;
   width: string;
   height: string;
+  justifyContent: string;
+  marginTop: string;
+  marginBottom: string;
+  borderRadius: string;
+}
+
+interface PropText {
+  paddingLeft?: string;
 }
 
 export const Botao = styled.button.attrs((props: PropButton) => ({
@@ -12,6 +20,10 @@ export const Botao = styled.button.attrs((props: PropButton) => ({
   hoverBg: props.hoverBg,
   width: props.width,
   height: props.height,
+  justifyContent: props.justifyContent,
+  marginTop: props.marginTop,
+  marginBottom: props.marginBottom,
+  borderRadius: props.borderRadius,
 }))<PropButton>`
   box-sizing: border-box;
 
@@ -21,19 +33,21 @@ export const Botao = styled.button.attrs((props: PropButton) => ({
 
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: ${(props) => props.justifyContent};
   align-items: center;
+  margin-top: ${(props) => props.marginTop};
+  margin-bottom: ${(props) => props.marginBottom};
 
   background: ${(props) => props.background};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+  border-radius: ${(props) => props.borderRadius};
 
   font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  color: var(--white);
+  color: var(--white-100);
   cursor: pointer;
 
   text-align: center;
@@ -45,8 +59,14 @@ export const Botao = styled.button.attrs((props: PropButton) => ({
   }
 
   @media screen and (max-width: 1280px) {
-    width: ${(props) => props.width};
+    width: calc(${(props) => props.width} - 30px);
     height: ${(props) => props.height};
     font-size: 14px;
   }
+`;
+
+export const Text = styled.p.attrs(({ paddingLeft }: PropText) => ({
+  paddingLeft,
+}))<PropText>`
+  padding-left: ${({ paddingLeft }) => paddingLeft};
 `;
