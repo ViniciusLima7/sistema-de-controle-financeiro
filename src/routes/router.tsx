@@ -4,6 +4,7 @@ import App from "../App";
 import Cadastro from "../pages/Cadastro";
 import Categorias from "../pages/Categorias";
 import Dashboard from "../pages/Dashboard";
+import Economias from "../pages/Economias";
 import Home from "../pages/Home";
 import { Login } from "../pages/Login";
 import SubCategorias from "../pages/SubCategorias";
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
       {
         path: "/subcategorias",
         element: <SubCategorias />,
+      },
+      {
+        path: "/economias",
+        element: <Economias />,
       },
     ],
   },
