@@ -4,7 +4,7 @@ import { Container, Input, InputLabel, Title, Option, Select } from "./styles";
 
 export default function InputArea() {
   return (
-    <Container>
+    <Container top="25rem">
       <InputLabel>
         <Title>Data</Title>
         <Input type="date"></Input>
