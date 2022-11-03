@@ -40,7 +40,7 @@ export default function InputArea() {
         text="Buscar"
         width="138px"
         height="30px"
-        paddingLeft="12px"
+        paddingLeft="7px"
         marginTop="31px"
         borderRadius="5px"
       />

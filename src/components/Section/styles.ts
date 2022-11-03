@@ -29,6 +29,6 @@ export const Container = styled.section.attrs(
   @media screen and (max-width: 1280px) {
     width: 900px;
     margin-top: -18px;
-    height: 163px;
+    height: 153px;
   }
 `;
