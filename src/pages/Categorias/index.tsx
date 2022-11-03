@@ -1,3 +1,4 @@
+import Actions from "../../components/Actions";
 import { Button } from "../../components/Button";
 import Header from "../../components/Header";
 import Column from "../../components/Table/Column";
@@ -9,7 +10,7 @@ export default function Categorias() {
     <>
       <Header />
       <Container width="700px" top="2rem">
-        <Button text="+ Nova Categoria" />
+        <Button text="+ Nova Categoria" marginBottom="15px" />
         <table>
           <thead>
             <tr>
@@ -24,13 +25,25 @@ export default function Categorias() {
               <Row>1</Row>
               <Row>Alimentação</Row>
               <Row>#FFE600</Row>
-              <Row>teste</Row>
+              <Row
+                justifyContent="space-evenly"
+                display="flex"
+                marginLeft="-20px"
+              >
+                <Actions />
+              </Row>
             </tr>
             <tr>
               <Row>1</Row>
               <Row>Adoração</Row>
               <Row>#762297</Row>
-              <Row>fsfs</Row>
+              <Row
+                justifyContent="space-evenly"
+                display="flex"
+                marginLeft="-20px"
+              >
+                <Actions />
+              </Row>
             </tr>
           </tbody>
         </table>
