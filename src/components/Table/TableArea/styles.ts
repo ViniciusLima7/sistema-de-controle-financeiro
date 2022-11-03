@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div<{ width?: string; top?: string }>`
   position: absolute;
-  width: 1156px;
+  width: ${(props) => (props.width ? props.width : "1156px")};
 
   display: flex;
   flex-direction: column;
@@ -16,11 +16,11 @@ export const Container = styled.div`
 
   transform: translate(-50%);
   left: 50%;
-  top: 25rem;
+  top: ${(props) => (props.top ? props.top : "25rem")};
 
   @media screen and (max-width: 1280px) {
-    width: 900px;
+    width: ${(props) => (props.width ? props.width : "900px")};
     margin-top: 80px;
-    top: 20rem;
+    top: ${(props) => (props.top ? "1rem" : "19rem")};
   }
 `;

@@ -1,4 +1,4 @@
-import { Pencil, Trash } from "phosphor-react";
+import Actions from "../../Actions";
 import Row from "../Row";
 
 export default function TableItem() {
@@ -12,8 +12,7 @@ export default function TableItem() {
         <Row>R$ 50</Row>
         <Row>Vinicius</Row>
         <Row justifyContent="space-evenly" display="flex" marginLeft="-20px">
-          <Pencil size={24} color="var(--black)" />
-          <Trash size={24} color="var(--red-500)" />
+          <Actions />
         </Row>
       </tr>
       <tr>
@@ -24,8 +23,7 @@ export default function TableItem() {
         <Row>R$ 40</Row>
         <Row>Daiani</Row>
         <Row justifyContent="space-evenly" display="flex" marginLeft="-20px">
-          <Pencil size={24} color="var(--black)" />
-          <Trash size={24} color="var(--red-500)" />
+          <Actions />
         </Row>
       </tr>
     </>

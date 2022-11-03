@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div<{ top?: string }>`
   position: absolute;
   width: 1156px;
   height: 133px;
@@ -16,12 +16,12 @@ export const Container = styled.div`
 
   transform: translate(-50%);
   left: 50%;
-  top: 25rem;
+  top: ${(props) => props.top};
 
   @media screen and (max-width: 1280px) {
     width: 900px;
     height: 113px;
-    top: 20rem;
+    top: calc(${(props) => props.top} - 6rem);
   }
 `;
 
