@@ -5,26 +5,24 @@ import Column from "../../components/Table/Column";
 import Row from "../../components/Table/Row";
 import { Container } from "../../components/Table/TableArea/styles";
 
-export default function Categorias() {
+export default function Responsaveis() {
   return (
     <>
       <Header />
       <Container width="700px" top="2rem">
-        <Button text="+ Nova Categoria" marginBottom="15px" />
+        <Button text="+ Novo Responsável" marginBottom="15px" />
         <table>
           <thead>
             <tr>
               <Column title="ID" width="100px" />
               <Column title="Nome" width="375px" />
-              <Column title="Cor" width="175px" />
               <Column title="Ações" width="100px" />
             </tr>
           </thead>
           <tbody>
             <tr>
               <Row>1</Row>
-              <Row>Alimentação</Row>
-              <Row>#FFE600</Row>
+              <Row>Vinicius Lima</Row>
               <Row
                 justifyContent="space-evenly"
                 display="flex"
@@ -35,8 +33,7 @@ export default function Categorias() {
             </tr>
             <tr>
               <Row>2</Row>
-              <Row>Adoração</Row>
-              <Row>#762297</Row>
+              <Row>Daiani Lima</Row>
               <Row
                 justifyContent="space-evenly"
                 display="flex"

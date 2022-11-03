@@ -7,6 +7,7 @@ import Dashboard from "../pages/Dashboard";
 import Economias from "../pages/Economias";
 import Home from "../pages/Home";
 import { Login } from "../pages/Login";
+import Responsaveis from "../pages/Responsaveis";
 import SubCategorias from "../pages/SubCategorias";
 
 export const router = createBrowserRouter([
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
       {
         path: "/economias",
         element: <Economias />,
+      },
+      {
+        path: "/responsaveis",
+        element: <Responsaveis />,
       },
     ],
   },

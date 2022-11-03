@@ -14,8 +14,8 @@ export default function SubCategorias() {
         <table>
           <thead>
             <tr>
-              <Column title="ID" width="150px" />
-              <Column title="Nome" width="175px" />
+              <Column title="ID" width="100px" />
+              <Column title="Nome" width="375px" />
               <Column title="Ações" width="100px" />
             </tr>
           </thead>
