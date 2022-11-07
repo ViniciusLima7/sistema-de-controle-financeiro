@@ -1,4 +1,5 @@
 import { Button } from "../../components/Button";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import {
   Input,
@@ -7,11 +8,12 @@ import {
   Select,
   Title,
 } from "../../components/InputArea/styles";
+import { Fragment } from "../Cadastro/styles";
 import { Container } from "./styles";
 
 export default function Dashboard() {
   return (
-    <>
+    <Fragment>
       <Header />
       <Container top="11rem">
         <InputLabel>
@@ -48,6 +50,7 @@ export default function Dashboard() {
           borderRadius="5px"
         />
       </Container>
-    </>
+      <Footer marginTop="865px" top="110%" />
+    </Fragment>
   );
 }
