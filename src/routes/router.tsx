@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import App from "../App";
+import { Modal } from "../components/Modal";
 import Cadastro from "../pages/Cadastro";
 import Categorias from "../pages/Categorias";
 import Dashboard from "../pages/Dashboard";
@@ -46,6 +47,10 @@ export const router = createBrowserRouter([
       {
         path: "/responsaveis",
         element: <Responsaveis />,
+      },
+      {
+        path: "/inscreva-se",
+        element: <Login />,
       },
     ],
   },
