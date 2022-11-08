@@ -47,6 +47,14 @@ export const router = createBrowserRouter([
         path: "/responsaveis",
         element: <Responsaveis />,
       },
+      {
+        path: "/inscreva-se",
+        element: <Login />,
+      },
+      {
+        path: "/cadastro/delete",
+        element: <Cadastro />,
+      },
     ],
   },
 ]);

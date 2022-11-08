@@ -1,13 +1,15 @@
 import Actions from "../../components/Actions";
 import { Button } from "../../components/Button";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Column from "../../components/Table/Column";
 import Row from "../../components/Table/Row";
 import { Container } from "../../components/Table/TableArea/styles";
+import { Fragment } from "../Cadastro/styles";
 
 export default function Categorias() {
   return (
-    <>
+    <Fragment>
       <Header />
       <Container width="700px" top="2rem">
         <Button text="+ Nova Categoria" marginBottom="15px" />
@@ -48,6 +50,7 @@ export default function Categorias() {
           </tbody>
         </table>
       </Container>
-    </>
+      <Footer marginTop="865px" top="110%" />
+    </Fragment>
   );
 }

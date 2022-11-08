@@ -4,10 +4,11 @@ import money from "../../assets/money57.svg";
 import educacaoFinanceira from "../../assets/educacao-financeira-capa.svg";
 import { Rodape } from "../Login/styles";
 import Footer from "../../components/Footer";
+import { Fragment } from "../Cadastro/styles";
 
 export default function Home() {
   return (
-    <>
+    <Fragment>
       <Header />
       {/* Content */}
       <div>
@@ -39,6 +40,6 @@ export default function Home() {
       {/* Content */}
 
       <Footer />
-    </>
+    </Fragment>
   );
 }

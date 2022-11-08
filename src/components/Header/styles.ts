@@ -52,7 +52,6 @@ export const Text = styled.span`
   margin-right: 16px;
   margin-top: 4px;
   color: var(--white-100);
-  cursor: pointer;
 
   @media screen and (max-width: 1280px) {
     font-size: 16px;

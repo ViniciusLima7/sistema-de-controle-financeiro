@@ -1,10 +1,15 @@
 import { Pencil, Trash } from "phosphor-react";
+import ModalDelete from "../ModalDelete";
 
-export default function Actions() {
+interface ActionsProps {
+  title?: string;
+}
+
+export default function Actions({ title }: ActionsProps) {
   return (
     <>
       <Pencil size={24} color="var(--black)" />
-      <Trash size={24} color="var(--red-500)" />
+      <ModalDelete title={title} />
     </>
   );
 }
