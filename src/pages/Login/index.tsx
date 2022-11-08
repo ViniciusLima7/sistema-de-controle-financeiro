@@ -13,13 +13,13 @@ import {
   TextLine,
   Title,
 } from "./styles";
-import { Modal } from "../../components/Modal";
+import { ModalSubscribe } from "../../components/ModalSubscribe";
 import { NavLink } from "react-router-dom";
 export function Login() {
   return (
     <ContainerBG>
       <NavLink to="../inscreva-se">
-        <Modal />
+        <ModalSubscribe />
       </NavLink>
       <Title>SISTEMA DE CONTROLE FINANCEIRO</Title>
       <SubTitle>Faça login para continuar</SubTitle>
