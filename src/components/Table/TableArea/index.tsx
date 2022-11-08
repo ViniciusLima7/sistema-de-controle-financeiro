@@ -3,7 +3,11 @@ import Column from "../Column";
 import TableItem from "../TableItem";
 import { Container } from "./styles";
 
-export default function TableArea() {
+interface TableAreaProps {
+  title?: string;
+}
+
+export default function TableArea({ title }: TableAreaProps) {
   return (
     <Container>
       <Button text="+ Novo Cadastro" width="200px" marginBottom="20px" />
@@ -20,7 +24,7 @@ export default function TableArea() {
           </tr>
         </thead>
         <tbody>
-          <TableItem />
+          <TableItem title={title} />
         </tbody>
       </table>
     </Container>

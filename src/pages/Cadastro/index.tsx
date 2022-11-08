@@ -13,7 +13,7 @@ export default function Cadastro() {
       <Header />
       <InfoArea />
       <InputArea />
-      <TableArea />
+      <TableArea title="Cadastro" />
       <Footer marginTop="865px" top="110%" />
     </Fragment>
   );

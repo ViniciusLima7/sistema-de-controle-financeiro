@@ -1,7 +1,11 @@
 import Actions from "../../Actions";
 import Row from "../Row";
 
-export default function TableItem() {
+interface TableItemProps {
+  title?: string;
+}
+
+export default function TableItem({ title }: TableItemProps) {
   return (
     <>
       <tr>
@@ -12,7 +16,7 @@ export default function TableItem() {
         <Row>R$ 50</Row>
         <Row>Vinicius</Row>
         <Row justifyContent="space-evenly" display="flex" marginLeft="-20px">
-          <Actions />
+          <Actions title={title} />
         </Row>
       </tr>
       <tr>
