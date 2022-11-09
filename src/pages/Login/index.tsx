@@ -13,7 +13,7 @@ import {
   TextLine,
   Title,
 } from "./styles";
-import { ModalSubscribe } from "../../components/ModalSubscribe";
+import { ModalSubscribe } from "../../components/Modal/ModalSubscribe";
 import { NavLink } from "react-router-dom";
 export function Login() {
   return (
