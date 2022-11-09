@@ -20,7 +20,7 @@ export const Box = styled.div`
   }
 `;
 
-export const Title = styled.h1`
+export const Text = styled.h1`
   font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 700;
@@ -35,31 +35,33 @@ export const Title = styled.h1`
   }
 `;
 
-export const Text = styled.h1`
-  font-family: "JetBrains Mono";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 26px;
-  text-align: center;
-  margin: 20px 0;
-
-  color: var(--black);
-  text-align: center;
+export const GroupButtom = styled.div<{
+  width?: string;
+}>`
+  display: flex;
+  justify-content: space-around;
+  width: ${(props) => props.width};
+  margin-top: 15px;
 
   @media screen and (max-width: 1280px) {
-    font-size: 14px;
+    width: calc(${(props) => props.width} - 50px);
   }
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<{
+  flexDirection?: string;
+  width?: string;
+  paddingLeft?: string;
+}>`
   display: flex;
   justify-content: space-between;
-  width: 320px;
-  margin-top: 20px;
-  margin-bottom: 70px;
+  flex-direction: ${(props) => props.flexDirection};
+  width: ${(props) => props.width};
+  margin-top: 15px;
+  text-align: start;
+  padding-left: ${(props) => props.paddingLeft};
 
   @media screen and (max-width: 1280px) {
-    width: 250px;
+    width: ${(props) => props.width};
   }
 `;
