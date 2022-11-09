@@ -27,7 +27,7 @@ export default function TableItem({ title }: TableItemProps) {
         <Row>R$ 40</Row>
         <Row>Daiani</Row>
         <Row justifyContent="space-evenly" display="flex" marginLeft="-20px">
-          <Actions />
+          <Actions title={title} />
         </Row>
       </tr>
     </>

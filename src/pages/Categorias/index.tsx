@@ -32,7 +32,7 @@ export default function Categorias() {
                 display="flex"
                 marginLeft="-20px"
               >
-                <Actions />
+                <Actions title="Categorias" />
               </Row>
             </tr>
             <tr>
@@ -44,7 +44,7 @@ export default function Categorias() {
                 display="flex"
                 marginLeft="-20px"
               >
-                <Actions />
+                <Actions title="Categorias" />
               </Row>
             </tr>
           </tbody>

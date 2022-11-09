@@ -5,7 +5,7 @@ interface ActionsProps {
   title?: string;
 }
 
-export default function Actions({ title }: ActionsProps) {
+export default function Actions({ title = "registro" }: ActionsProps) {
   return (
     <>
       <Pencil size={24} color="var(--black)" />

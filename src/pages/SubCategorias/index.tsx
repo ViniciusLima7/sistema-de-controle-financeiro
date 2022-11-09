@@ -30,7 +30,7 @@ export default function SubCategorias() {
                 display="flex"
                 marginLeft="-20px"
               >
-                <Actions />
+                <Actions title="SubCategorias" />
               </Row>
             </tr>
             <tr>
@@ -41,7 +41,7 @@ export default function SubCategorias() {
                 display="flex"
                 marginLeft="-20px"
               >
-                <Actions />
+                <Actions title="SubCategorias" />
               </Row>
             </tr>
           </tbody>

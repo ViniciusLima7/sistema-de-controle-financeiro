@@ -17,7 +17,7 @@ export default function ModalDelete({ title = "registro" }: ModalDeleteProps) {
   return (
     <div>
       <ButtonMui onClick={handleOpen}>
-        <NavLink to="../cadastro/delete">
+        <NavLink to={`../${title.toLowerCase()}/delete`}>
           <Trash size={24} color="var(--red-500)"></Trash>
         </NavLink>
       </ButtonMui>

@@ -30,7 +30,7 @@ export default function Responsaveis() {
                 display="flex"
                 marginLeft="-20px"
               >
-                <Actions />
+                <Actions title="Responsaveis" />
               </Row>
             </tr>
             <tr>
@@ -41,7 +41,7 @@ export default function Responsaveis() {
                 display="flex"
                 marginLeft="-20px"
               >
-                <Actions />
+                <Actions title="Responsaveis" />
               </Row>
             </tr>
           </tbody>
