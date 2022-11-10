@@ -1,4 +1,3 @@
-import { Pencil, Trash } from "phosphor-react";
 import ModalDelete from "../Modal/ModalDelete";
 import ModalEdit from "../Modal/ModalEdit";
 

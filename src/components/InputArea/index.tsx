@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "../Button";
 import { Container, Input, InputLabel, Title, Option, Select } from "./styles";
 

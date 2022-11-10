@@ -1,22 +1,16 @@
 import ButtonMui from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
-import { Pencil, Trash } from "phosphor-react";
-import { Box, Container, GroupButtom, Text } from "./styles";
+import { Pencil } from "phosphor-react";
+import { Box, GroupButtom, Text } from "./styles";
 import { Button } from "../../Button";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import {
-  Input,
-  InputLabel,
-  Option,
-  Select,
-  Title,
-} from "../../InputArea/styles";
-import EditCategoria from "../../Edit/EditCategoria";
-import EditCadastro from "../../Edit/EditCadastro";
-import EditSubCategoria from "../../Edit/EditSubCategoria";
-import EditEconomia from "../../Edit/EditEconomia";
-import EditResponsavel from "../../Edit/EditResponsavel";
+
+import EditCategoria from "./Edit/EditCategoria";
+import EditCadastro from "./Edit/EditCadastro";
+import EditSubCategoria from "./Edit/EditSubCategoria";
+import EditEconomia from "./Edit/EditEconomia";
+import EditResponsavel from "./Edit/EditResponsavel";
 
 interface ModalEditProps {
   title?: string;

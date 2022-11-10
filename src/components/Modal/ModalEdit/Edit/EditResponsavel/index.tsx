@@ -1,5 +1,5 @@
-import { Input, InputLabel, Title } from "../../InputArea/styles";
-import { Container } from "../styles";
+import { Input, InputLabel, Title } from "../../../../InputArea/styles";
+import { Container } from "../../../ModalEdit/Edit/styles";
 
 export default function EditResponsavel() {
   return (

@@ -1,5 +1,3 @@
-import { Pencil, Trash } from "phosphor-react";
-import { Button } from "../../components/Button";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import InfoArea from "../../components/InfoArea";
