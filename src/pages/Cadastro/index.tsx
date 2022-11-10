@@ -1,4 +1,3 @@
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import InfoArea from "../../components/InfoArea";
 import InputArea from "../../components/InputArea";
@@ -12,7 +11,6 @@ export default function Cadastro() {
       <InfoArea />
       <InputArea />
       <TableArea title="Cadastro" />
-      <Footer marginTop="865px" top="110%" />
     </Fragment>
   );
 }

@@ -1,6 +1,5 @@
 import Actions from "../../components/Actions";
 import { Button } from "../../components/Button";
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Column from "../../components/Table/Column";
 import Row from "../../components/Table/Row";
@@ -47,7 +46,6 @@ export default function SubCategorias() {
           </tbody>
         </table>
       </Container>
-      <Footer marginTop="865px" top="110%" />
     </Fragment>
   );
 }

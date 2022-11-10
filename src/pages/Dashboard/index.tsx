@@ -1,5 +1,4 @@
 import { Button } from "../../components/Button";
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import {
   Input,
@@ -50,7 +49,6 @@ export default function Dashboard() {
           borderRadius="5px"
         />
       </Container>
-      <Footer marginTop="865px" top="110%" />
     </Fragment>
   );
 }

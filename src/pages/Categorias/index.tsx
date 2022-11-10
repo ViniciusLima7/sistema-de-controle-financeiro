@@ -50,7 +50,6 @@ export default function Categorias() {
           </tbody>
         </table>
       </Container>
-      <Footer marginTop="865px" top="110%" />
     </Fragment>
   );
 }
