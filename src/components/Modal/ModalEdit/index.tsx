@@ -12,6 +12,11 @@ import {
   Select,
   Title,
 } from "../../InputArea/styles";
+import EditCategoria from "../../Edit/EditCategoria";
+import EditCadastro from "../../Edit/EditCadastro";
+import EditSubCategoria from "../../Edit/EditSubCategoria";
+import EditEconomia from "../../Edit/EditEconomia";
+import EditResponsavel from "../../Edit/EditResponsavel";
 
 interface ModalEditProps {
   title?: string;
@@ -32,47 +37,18 @@ export default function ModalEdit({ title = "registro" }: ModalEditProps) {
         <Box>
           <Text>Editar {title}</Text>
 
-          <Container width="450px">
-            <Container flexDirection="column" width="400px" paddingLeft="20px">
-              <InputLabel>
-                <Title>Data</Title>
-                <Input width="70%" type="date"></Input>
-              </InputLabel>
+          {title === "Cadastro" ? (
+            <EditCadastro />
+          ) : title === "Categorias" ? (
+            <EditCategoria />
+          ) : title === "SubCategorias" ? (
+            <EditSubCategoria />
+          ) : title === "Economias" ? (
+            <EditEconomia />
+          ) : (
+            <EditResponsavel />
+          )}
 
-              <InputLabel>
-                <Title>SubCategoria</Title>
-                <Select width="76%">
-                  <Option>-Selecione-</Option>
-                </Select>
-              </InputLabel>
-
-              <InputLabel>
-                <Title>Preço</Title>
-                <Input width="70%" placeholder="Preço"></Input>
-              </InputLabel>
-            </Container>
-
-            <Container flexDirection="column" width="400px">
-              <InputLabel>
-                <Title>Categoria </Title>
-                <Select width="77%">
-                  <Option>-Selecione-</Option>
-                </Select>
-              </InputLabel>
-
-              <InputLabel>
-                <Title>Título</Title>
-                <Input width="70%" placeholder="Título"></Input>
-              </InputLabel>
-
-              <InputLabel>
-                <Title>Responsável</Title>
-                <Select width="76%">
-                  <Option>-Selecione-</Option>
-                </Select>
-              </InputLabel>
-            </Container>
-          </Container>
           <GroupButtom width="280px">
             <Button width="119px" text="Salvar"></Button>
             <Button
