@@ -4,7 +4,7 @@ import {
   Option,
   Select,
   Title,
-} from "../../InputArea/styles";
+} from "../../../../InputArea/styles";
 import { Container } from "../styles";
 
 export default function EditCadastro() {

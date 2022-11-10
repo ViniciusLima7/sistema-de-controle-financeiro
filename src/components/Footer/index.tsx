@@ -1,4 +1,3 @@
-import React from "react";
 import { Rodape } from "../../pages/Login/styles";
 import { Container } from "./styles";
 

@@ -1,8 +1,4 @@
 import { Container, Info, Logo, Title } from "./styles";
-import deposito from "../../assets/deposito.png";
-import retirada from "../../assets/retirada.png";
-import saldo from "../../assets/saldo.png";
-import cofrinho from "../../assets/cofrinho.svg";
 
 interface ResumeItemProps {
   title: string;

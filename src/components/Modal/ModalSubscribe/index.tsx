@@ -1,4 +1,3 @@
-import * as React from "react";
 import Container from "@mui/material/Modal";
 import { Registration } from "../../../pages/Login/styles";
 import { Box, Subtitle, Text, Link, Title } from "./styles";
@@ -6,9 +5,10 @@ import { Input } from "../../Input";
 import { Line, TextLine } from "../../../pages/Login/styles";
 import { Button } from "../../Button";
 import { Envelope, Lock, User } from "phosphor-react";
+import { useState } from "react";
 
 export function ModalSubscribe() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   return (
