@@ -11,6 +11,13 @@
 
 SCF, é um sistema Web, onde você pode fazer o Controle de Seus Gastos Financeiros e da Sua família, fazer um balanço e ver onde seu dinheiro esta sendo gasto, investido, para que tome melhores decisões.
 
+Link do Figma:
+https://www.figma.com/file/XHkw7BZU7F6oFDDLUsKuR9/Sistema-de-Controle-Financeiro?node-id=0%3A1
+
+
+Link do Projeto:
+https://sistema-de-controle-financeiro.vercel.app/ 
+
 
 ## 🛠 Tecnologias Usadas :heart_eyes:
 
