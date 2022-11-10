@@ -45,7 +45,9 @@ export function Login() {
           marginBottom="10px"
         ></Input>
         <Text>Esqueceu a senha?</Text>
-        <Button text="Entrar"></Button>
+        <NavLink to="../inicio">
+          <Button text="Entrar"></Button>
+        </NavLink>
         <Line color="var(--white-100)">
           <TextLine color="var(--white-100);">ou</TextLine>
         </Line>
