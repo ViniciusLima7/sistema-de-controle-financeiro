@@ -36,7 +36,7 @@ export default function Economias() {
                 display="flex"
                 marginLeft="-20px"
               >
-                <Actions />
+                <Actions title="Economias" />
               </Row>
             </tr>
             <tr>
@@ -50,7 +50,7 @@ export default function Economias() {
                 display="flex"
                 marginLeft="-20px"
               >
-                <Actions />
+                <Actions title="Economias" />
               </Row>
             </tr>
           </tbody>

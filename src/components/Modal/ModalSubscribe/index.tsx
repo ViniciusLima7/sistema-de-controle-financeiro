@@ -1,10 +1,10 @@
 import * as React from "react";
 import Container from "@mui/material/Modal";
-import { Registration } from "../../pages/Login/styles";
+import { Registration } from "../../../pages/Login/styles";
 import { Box, Subtitle, Text, Link, Title } from "./styles";
-import { Input } from "../Input";
-import { Line, TextLine } from "../../pages/Login/styles";
-import { Button } from "../Button";
+import { Input } from "../../Input";
+import { Line, TextLine } from "../../../pages/Login/styles";
+import { Button } from "../../Button";
 import { Envelope, Lock, User } from "phosphor-react";
 
 export function ModalSubscribe() {

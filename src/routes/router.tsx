@@ -55,6 +55,44 @@ export const router = createBrowserRouter([
         path: "/cadastro/delete",
         element: <Cadastro />,
       },
+      {
+        path: "/categorias/delete",
+        element: <Categorias />,
+      },
+      {
+        path: "/subcategorias/delete",
+        element: <SubCategorias />,
+      },
+      {
+        path: "/economias/delete",
+        element: <Economias />,
+      },
+
+      {
+        path: "/responsaveis/delete",
+        element: <Responsaveis />,
+      },
+      {
+        path: "/cadastro/edit",
+        element: <Cadastro />,
+      },
+      {
+        path: "/categorias/edit",
+        element: <Categorias />,
+      },
+      {
+        path: "/subcategorias/edit",
+        element: <SubCategorias />,
+      },
+      {
+        path: "/economias/edit",
+        element: <Economias />,
+      },
+
+      {
+        path: "/responsaveis/edit",
+        element: <Responsaveis />,
+      },
     ],
   },
 ]);

@@ -2,7 +2,7 @@ import ButtonMui from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import { Trash } from "phosphor-react";
 import { Box, Container, Text, Title } from "./styles";
-import { Button } from "../Button";
+import { Button } from "../../Button";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -17,7 +17,7 @@ export default function ModalDelete({ title = "registro" }: ModalDeleteProps) {
   return (
     <div>
       <ButtonMui onClick={handleOpen}>
-        <NavLink to="../cadastro/delete">
+        <NavLink to={`../${title.toLowerCase()}/delete`}>
           <Trash size={24} color="var(--red-500)"></Trash>
         </NavLink>
       </ButtonMui>
