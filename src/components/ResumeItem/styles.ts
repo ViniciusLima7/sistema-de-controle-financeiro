@@ -38,7 +38,7 @@ export const Logo = styled.img.attrs(
   width: ${({ width }) => width};
 
   @media screen and (max-width: 1280px) {
-    margin-left: calc(${({ marginLeft }) => marginLeft} - 4%); //corrigir
+    margin-left: calc(${({ marginLeft }) => marginLeft} + 3%); //corrigir
     height: calc(${({ height }) => height} - 24px);
     width: calc(${({ height }) => height} - 24px);
   }

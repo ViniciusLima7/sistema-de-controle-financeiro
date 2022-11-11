@@ -28,12 +28,23 @@ export default function InfoArea({
         <MonthArrow>➡️</MonthArrow>
       </MonthArea>
       <ResumeArea>
-        <ResumeItem icon={deposito} title="RECEITAS" price={0} />
-        <ResumeItem icon={retirada} title="DESPESAS" price={0} />
         <ResumeItem
+          marginLeft="34%"
+          icon={deposito}
+          title="RECEITAS"
+          price={0}
+        />
+        <ResumeItem
+          marginLeft="34%"
+          icon={retirada}
+          title="DESPESAS"
+          price={0}
+        />
+        <ResumeItem
+          marginLeft="34%"
           icon={saldo}
           title="BALANÇO"
-          price={0}
+          price={10}
           color={receita - despesa < 0 ? "#E50914" : "#00E520"}
         />
         <ResumeItem
