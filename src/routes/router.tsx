@@ -90,7 +90,28 @@ export const router = createBrowserRouter([
       },
 
       {
-        path: "/responsaveis/edit",
+        path: "/responsaveis/add",
+        element: <Responsaveis />,
+      },
+      {
+        path: "/cadastro/add",
+        element: <Cadastro />,
+      },
+      {
+        path: "/categorias/add",
+        element: <Categorias />,
+      },
+      {
+        path: "/subcategorias/add",
+        element: <SubCategorias />,
+      },
+      {
+        path: "/economias/add",
+        element: <Economias />,
+      },
+
+      {
+        path: "/responsaveis/add",
         element: <Responsaveis />,
       },
     ],

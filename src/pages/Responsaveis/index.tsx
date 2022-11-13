@@ -1,7 +1,6 @@
 import Actions from "../../components/Actions";
-import { Button } from "../../components/Button";
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import ModalAdd from "../../components/Modal/ModalAdd";
 import Column from "../../components/Table/Column";
 import Row from "../../components/Table/Row";
 import { Container } from "../../components/Table/TableArea/styles";
@@ -12,7 +11,11 @@ export default function Responsaveis() {
     <Fragment>
       <Header />
       <Container width="700px" top="2rem">
-        <Button text="+ Novo Responsável" marginBottom="15px" />
+        <ModalAdd
+          title="Responsaveis"
+          text="+ Novo Responsável"
+          marginBottom="15px"
+        />
         <table>
           <thead>
             <tr>
