@@ -13,7 +13,7 @@ export default function Economias() {
       <Container width="700px" top="2rem">
         <ModalAdd
           title="Economias"
-          text="+ Meta de Economia"
+          text="+ Nova Meta de Economia"
           marginBottom="15px"
         />
         <table>
