@@ -1,4 +1,4 @@
-import { Button } from "../../Button";
+import ModalAdd from "../../Modal/ModalAdd";
 import Column from "../Column";
 import TableItem from "../TableItem";
 import { Container } from "./styles";
@@ -10,7 +10,12 @@ interface TableAreaProps {
 export default function TableArea({ title }: TableAreaProps) {
   return (
     <Container>
-      <Button text="+ Novo Cadastro" width="200px" marginBottom="20px" />
+      <ModalAdd
+        title="Cadastro"
+        text="+ Novo Cadastro"
+        width="200px"
+        marginBottom="20px"
+      />
       <table>
         <thead>
           <tr>

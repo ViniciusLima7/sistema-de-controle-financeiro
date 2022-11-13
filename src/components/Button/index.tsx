@@ -13,6 +13,7 @@ export interface ButtonProps {
   marginTop?: string;
   marginBottom?: string;
   borderRadius?: string;
+  onClick?: () => void;
 }
 
 export function Button({
@@ -26,6 +27,7 @@ export function Button({
   marginTop,
   marginBottom,
   borderRadius = "10px",
+  onClick,
 }: ButtonProps) {
   return (
     <Botao
@@ -37,6 +39,7 @@ export function Button({
       marginTop={marginTop}
       marginBottom={marginBottom}
       borderRadius={borderRadius}
+      onClick={onClick}
     >
       {text === "Entrar com Google" || text === "Continuar com o Google" ? (
         <img src={iconGoogle}></img>

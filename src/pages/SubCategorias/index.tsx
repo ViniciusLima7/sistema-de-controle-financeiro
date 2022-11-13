@@ -1,6 +1,6 @@
 import Actions from "../../components/Actions";
-import { Button } from "../../components/Button";
 import Header from "../../components/Header";
+import ModalAdd from "../../components/Modal/ModalAdd";
 import Column from "../../components/Table/Column";
 import Row from "../../components/Table/Row";
 import { Container } from "../../components/Table/TableArea/styles";
@@ -11,7 +11,11 @@ export default function SubCategorias() {
     <Fragment>
       <Header />
       <Container width="700px" top="2rem">
-        <Button text="+ Nova SubCategoria" marginBottom="15px" />
+        <ModalAdd
+          title="SubCategorias"
+          text="+ Nova SubCategoria"
+          marginBottom="15px"
+        />
         <table>
           <thead>
             <tr>
