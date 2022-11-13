@@ -24,7 +24,7 @@ export function ModalResetPassword() {
             placeholder="Digite o email cadastrado"
             marginBottom="60px"
           />
-          <NavLink to="../emailsend">
+          <NavLink to="../emailsend" style={{ textDecoration: "none" }}>
             <ModalEmailSend />
           </NavLink>
           <Text>Voltar para o login</Text>
