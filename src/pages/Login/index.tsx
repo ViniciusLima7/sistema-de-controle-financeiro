@@ -15,6 +15,7 @@ import {
 } from "./styles";
 import { ModalSubscribe } from "../../components/Modal/ModalSubscribe";
 import { NavLink } from "react-router-dom";
+import { ModalResetPassword } from "../../components/Modal/ModalResetPassword";
 export function Login() {
   return (
     <ContainerBG>
@@ -44,7 +45,9 @@ export function Login() {
           heightLabel="72px"
           marginBottom="10px"
         ></Input>
-        <Text>Esqueceu a senha?</Text>
+        <NavLink to="../resetpassword" style={{ textDecoration: "none" }}>
+          <ModalResetPassword />
+        </NavLink>
         <NavLink to="../inicio">
           <Button text="Entrar"></Button>
         </NavLink>
