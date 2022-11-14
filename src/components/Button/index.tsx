@@ -42,9 +42,9 @@ export function Button({
       onClick={onClick}
     >
       {text === "Entrar com Google" || text === "Continuar com o Google" ? (
-        <img src={iconGoogle}></img>
+        <img alt="Icone do Google" src={iconGoogle}></img>
       ) : text === "Buscar" ? (
-        <img src={search}></img>
+        <img alt="Icone de Pesquisar" src={search}></img>
       ) : (
         ""
       )}
