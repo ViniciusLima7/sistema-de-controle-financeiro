@@ -20,7 +20,7 @@ export default function Header() {
     <Container>
       <Section>
         <Title>SISTEMA DE CONTROLE FINANCEIRO</Title>
-        <Image src={money}></Image>
+        <Image alt="Saco de Dinheiro" src={money}></Image>
       </Section>
       <Section>
         <Text>
