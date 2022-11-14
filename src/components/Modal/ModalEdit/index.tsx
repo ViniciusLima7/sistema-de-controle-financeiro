@@ -23,7 +23,7 @@ export default function ModalEdit({ title = "registro" }: ModalEditProps) {
   return (
     <>
       <ButtonMui onClick={handleOpen}>
-        <NavLink to={`../${title.toLowerCase()}/edit`}>
+        <NavLink title="Editar" to={`../${title.toLowerCase()}/edit`}>
           <Pencil size={24} color="var(--black)"></Pencil>
         </NavLink>
       </ButtonMui>

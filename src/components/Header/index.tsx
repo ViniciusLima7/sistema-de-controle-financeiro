@@ -81,9 +81,9 @@ export default function Header() {
         </Text>
       </Section>
       <Box>
-        <Image src={profile}></Image>
-        <Image src={settings}></Image>
-        <Image src={notification}></Image>
+        <Image title="Perfil" src={profile}></Image>
+        <Image title="Configurações" src={settings}></Image>
+        <Image title="Notificações" src={notification}></Image>
       </Box>
     </Container>
   );
