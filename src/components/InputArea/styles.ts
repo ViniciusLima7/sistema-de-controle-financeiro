@@ -1,4 +1,3 @@
-import { width } from "@mui/system";
 import styled from "styled-components";
 
 interface PropInput {
