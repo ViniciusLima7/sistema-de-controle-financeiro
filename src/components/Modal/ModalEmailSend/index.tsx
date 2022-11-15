@@ -2,6 +2,7 @@ import Container from "@mui/material/Modal";
 import { Box, Message, Subtitle, Text, Title } from "./styles";
 import { Button } from "../../Button";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export function ModalEmailSend() {
   const [open, setOpen] = useState(false);
@@ -28,7 +29,13 @@ export function ModalEmailSend() {
               de expiração, válido somente por 5 minutos.
             </Message>
           </div>
-          <Text>Voltar para o login</Text>
+          <NavLink
+            to="../"
+            style={{ textDecoration: "none" }}
+            onClick={handleClose}
+          >
+            <Text>Voltar para o login</Text>
+          </NavLink>
         </Box>
       </Container>
     </>
