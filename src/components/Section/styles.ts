@@ -1,16 +1,7 @@
 import styled from "styled-components";
+import { ISection } from "../../interfaces/ISection";
 
-interface PropContainer {
-  width?: string;
-  height?: string;
-}
-
-export const Container = styled.section.attrs(
-  ({ width, height }: PropContainer) => ({
-    width,
-    height,
-  })
-)<PropContainer>`
+export const Container = styled.section<ISection>`
   position: absolute;
   height: ${({ height }) => height};
   width: ${({ width }) => width};

@@ -1,12 +1,9 @@
 import styled from "styled-components";
+import { IFooter } from "../../interfaces/IFooter";
 
-interface PropContainer {
-  marginTop?: string;
-}
-
-export const Container = styled.div.attrs((props: PropContainer) => ({
+export const Container = styled.div.attrs((props: IFooter) => ({
   marginTop: props.marginTop,
-}))<PropContainer>`
+}))<IFooter>`
   width: 100vw;
   height: 94px;
   margin-top: ${(props) => props.marginTop};

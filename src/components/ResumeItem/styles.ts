@@ -1,10 +1,5 @@
 import styled from "styled-components";
-
-interface PropLogo {
-  width?: string;
-  height?: string;
-  marginLeft?: string;
-}
+import { IResumeItem } from "../../interfaces/IResumeItem";
 
 export const Container = styled.div`
   flex: 1;
@@ -27,12 +22,12 @@ export const Title = styled.div`
 `;
 
 export const Logo = styled.img.attrs(
-  ({ width = "59px", height = "59px", marginLeft = "38%" }: PropLogo) => ({
+  ({ width = "59px", height = "59px", marginLeft = "38%" }: IResumeItem) => ({
     width,
     height,
     marginLeft,
   })
-)<PropLogo>`
+)<IResumeItem>`
   margin-left: ${({ marginLeft }) => marginLeft}; //corrigir
   height: ${({ height }) => height};
   width: ${({ width }) => width};

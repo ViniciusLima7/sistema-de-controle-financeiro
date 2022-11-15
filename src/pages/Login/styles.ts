@@ -1,17 +1,7 @@
 import styled from "styled-components";
 import fundo from "../../assets/fundofigma.jpg";
-
-interface PropLine {
-  color?: string;
-}
-
-interface PropTextLine {
-  color?: string;
-}
-
-interface PropRodape {
-  top?: string;
-}
+import { IColor } from "../../interfaces/IColor";
+import { IFooter } from "../../interfaces/IFooter";
 
 export const ContainerBG = styled.div`
   //Image
@@ -116,9 +106,7 @@ export const Text = styled.p`
   }
 `;
 
-export const Line = styled.div.attrs((props: PropLine) => ({
-  color: props.color,
-}))<PropLine>`
+export const Line = styled.div<IColor>`
   display: flex;
   flex-direction: row;
   padding: 8px;
@@ -141,9 +129,7 @@ export const Line = styled.div.attrs((props: PropLine) => ({
   }
 `;
 
-export const TextLine = styled.span.attrs((props: PropTextLine) => ({
-  color: props.color,
-}))<PropTextLine>`
+export const TextLine = styled.span<IColor>`
   font-family: "Inter";
   font-style: normal;
   font-weight: 200;
@@ -156,9 +142,7 @@ export const TextLine = styled.span.attrs((props: PropTextLine) => ({
   }
 `;
 
-export const Rodape = styled.h3.attrs(({ top = "91%" }: PropRodape) => ({
-  top: top,
-}))<PropRodape>`
+export const Rodape = styled.h3<IFooter>`
   font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 400;
@@ -176,7 +160,7 @@ export const Rodape = styled.h3.attrs(({ top = "91%" }: PropRodape) => ({
   }
 
   position: absolute;
-  top: ${({ top }) => top};
+  top: ${({ top }) => top ?? "91%"};
   left: 50%;
   transform: translate(-50%, 0);
 

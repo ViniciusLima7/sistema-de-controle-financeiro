@@ -6,20 +6,14 @@ import retirada from "../../assets/retirada.png";
 import saldo from "../../assets/saldo.png";
 import cofrinho from "../../assets/cofrinho.svg";
 import Section from "../Section";
-
-interface InfoProps {
-  currentMonth?: string;
-  onMonthChange?: (newMonth: string) => void;
-  receita?: number;
-  despesa?: number;
-}
+import { IInfoArea } from "../../interfaces/IInfoArea";
 
 export default function InfoArea({
   currentMonth,
   onMonthChange,
   receita = 0,
   despesa = 0,
-}: InfoProps) {
+}: IInfoArea) {
   return (
     <Section>
       <MonthArea>

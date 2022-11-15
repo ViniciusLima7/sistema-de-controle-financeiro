@@ -1,20 +1,7 @@
 import { Botao, Text } from "./styles";
 import iconGoogle from "../../assets/google-icon.svg";
 import search from "../../assets/search.svg";
-
-export interface ButtonProps {
-  text: string;
-  background?: string;
-  hoverBg?: string;
-  width?: string;
-  height?: string;
-  paddingLeft?: string;
-  justifyContent?: string;
-  marginTop?: string;
-  marginBottom?: string;
-  borderRadius?: string;
-  onClick?: () => void;
-}
+import { IButton } from "../../interfaces/IButton";
 
 export function Button({
   text = "Button",
@@ -28,7 +15,7 @@ export function Button({
   marginBottom,
   borderRadius = "10px",
   onClick,
-}: ButtonProps) {
+}: IButton) {
   return (
     <Botao
       background={background}

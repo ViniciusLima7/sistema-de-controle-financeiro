@@ -1,17 +1,12 @@
 import { ReactElement } from "react";
+import { ISection } from "../../interfaces/ISection";
 import { Container } from "./styles";
-
-interface SectionProp {
-  width?: string;
-  height?: string;
-  children?: ReactElement[];
-}
 
 export default function Section({
   width = "1156px",
   height = "183px",
   children,
-}: SectionProp) {
+}: ISection) {
   return (
     <>
       <Container width={width} height={height}>
