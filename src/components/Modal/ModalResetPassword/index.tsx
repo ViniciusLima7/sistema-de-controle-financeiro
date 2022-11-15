@@ -5,7 +5,7 @@ import { Input } from "../../Input";
 import { Button } from "../../Button";
 import { Envelope } from "phosphor-react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ModalEmailSend } from "../ModalEmailSend";
 
 export function ModalResetPassword() {
@@ -27,7 +27,13 @@ export function ModalResetPassword() {
           <NavLink to="../emailsend" style={{ textDecoration: "none" }}>
             <ModalEmailSend />
           </NavLink>
-          <Text>Voltar para o login</Text>
+          <NavLink
+            to="../"
+            style={{ textDecoration: "none" }}
+            onClick={handleClose}
+          >
+            <Text>Voltar para o login</Text>
+          </NavLink>
         </Box>
       </Container>
     </>

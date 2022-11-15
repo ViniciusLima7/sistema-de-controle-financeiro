@@ -6,6 +6,7 @@ import { Line, TextLine } from "../../../pages/Login/styles";
 import { Button } from "../../Button";
 import { Envelope, Lock, User } from "phosphor-react";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export function ModalSubscribe() {
   const [open, setOpen] = useState(false);
@@ -48,7 +49,18 @@ export function ModalSubscribe() {
             height="44px"
           ></Button>
           <Text>
-            Já Se cadastrou? <Link>Entre</Link>
+            Já Se cadastrou?{" "}
+            <NavLink
+              to="../"
+              onClick={handleClose}
+              style={{
+                textDecoration: "none",
+                color: "var(--blue-600) ",
+                fontWeight: "600",
+              }}
+            >
+              Entre
+            </NavLink>
           </Text>
         </Box>
       </Container>
