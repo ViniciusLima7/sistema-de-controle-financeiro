@@ -26,6 +26,7 @@ export function Input({
         name={name}
         width={width}
         height={height}
+        autoComplete="on"
       />
     </Label>
   );

@@ -78,7 +78,7 @@ export const Registration = styled.p`
   }
 `;
 
-export const FormLogin = styled.div`
+export const FormLogin = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
