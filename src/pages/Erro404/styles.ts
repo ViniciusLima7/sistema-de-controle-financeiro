@@ -8,12 +8,12 @@ export const Title = styled.h1`
   line-height: 724px;
   text-align: center;
   margin: 0;
-  margin-top: -100px;
+  margin-top: -300px;
   color: var(--blue-600);
 
   @media screen and (max-width: 1280px) {
     font-size: 300px;
-    margin-top: -200px;
+    margin-top: -300px;
   }
 `;
 
@@ -26,6 +26,7 @@ export const Subtitle = styled.h2`
   margin-top: -200px;
   margin-bottom: 100px;
   text-align: center;
+  /* color: var(--white-100); */
 
   @media screen and (max-width: 1280px) {
     font-size: 30px;
@@ -41,4 +42,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: lightblue;
+  height: 100vh;
 `;
