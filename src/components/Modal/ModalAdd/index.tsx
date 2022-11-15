@@ -9,19 +9,14 @@ import AddCadastro from "./Add/AddCadastro";
 import AddSubCategoria from "./Add/AddSubCategoria";
 import AddEconomia from "./Add/AddEconomia";
 import AddResponsavel from "./Add/AddResponsavel";
+import { IModal } from "../../../interfaces/IModal";
 
-interface ModalAddProps {
-  title?: string;
-  text?: string;
-  marginBottom?: string;
-  width?: string;
-}
 export default function ModalAdd({
   title = "registro",
   text = "Adicionar",
   marginBottom,
   width,
-}: ModalAddProps) {
+}: IModal) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);

@@ -11,11 +11,9 @@ import EditCadastro from "./Edit/EditCadastro";
 import EditSubCategoria from "./Edit/EditSubCategoria";
 import EditEconomia from "./Edit/EditEconomia";
 import EditResponsavel from "./Edit/EditResponsavel";
+import { IModal } from "../../../interfaces/IModal";
 
-interface ModalEditProps {
-  title?: string;
-}
-export default function ModalEdit({ title = "registro" }: ModalEditProps) {
+export default function ModalEdit({ title = "registro" }: IModal) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -23,7 +21,7 @@ export default function ModalEdit({ title = "registro" }: ModalEditProps) {
   return (
     <>
       <ButtonMui onClick={handleOpen}>
-        <NavLink to={`../${title.toLowerCase()}/edit`}>
+        <NavLink title="Editar" to={`../${title.toLowerCase()}/edit`}>
           <Pencil size={24} color="var(--black)"></Pencil>
         </NavLink>
       </ButtonMui>

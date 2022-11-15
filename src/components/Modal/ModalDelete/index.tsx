@@ -5,11 +5,9 @@ import { Box, Container, Text, Title } from "./styles";
 import { Button } from "../../Button";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { IModal } from "../../../interfaces/IModal";
 
-interface ModalDeleteProps {
-  title?: string;
-}
-export default function ModalDelete({ title = "registro" }: ModalDeleteProps) {
+export default function ModalDelete({ title = "registro" }: IModal) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -17,7 +15,7 @@ export default function ModalDelete({ title = "registro" }: ModalDeleteProps) {
   return (
     <div>
       <ButtonMui onClick={handleOpen}>
-        <NavLink to={`../${title.toLowerCase()}/delete`}>
+        <NavLink title="Excluir" to={`../${title.toLowerCase()}/delete`}>
           <Trash size={24} color="var(--red-500)"></Trash>
         </NavLink>
       </ButtonMui>

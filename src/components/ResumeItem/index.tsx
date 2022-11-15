@@ -1,14 +1,5 @@
+import { IResumeItem } from "../../interfaces/IResumeItem";
 import { Container, Info, Logo, Title } from "./styles";
-
-interface ResumeItemProps {
-  title: string;
-  price?: number;
-  color?: string;
-  icon?: string;
-  width?: string;
-  height?: string;
-  marginLeft?: string;
-}
 
 export default function ResumeItem({
   title,
@@ -18,7 +9,7 @@ export default function ResumeItem({
   width,
   height,
   marginLeft,
-}: ResumeItemProps) {
+}: IResumeItem) {
   return (
     <Container>
       <Title>{title}</Title>

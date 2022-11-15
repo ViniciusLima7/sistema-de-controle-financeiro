@@ -1,17 +1,6 @@
 import { ReactNode } from "react";
+import { IInput } from "../../interfaces/IInput";
 import { InputStyle, Label } from "./styles";
-
-interface InputProps {
-  icon?: ReactNode;
-  type?: string;
-  name?: string;
-  placeholder: string;
-  width?: string;
-  height?: string;
-  widthLabel?: string;
-  heightLabel?: string;
-  marginBottom?: string;
-}
 
 export function Input({
   icon,
@@ -23,7 +12,7 @@ export function Input({
   widthLabel,
   heightLabel,
   marginBottom = "2px",
-}: InputProps) {
+}: IInput) {
   return (
     <Label
       widthLabel={widthLabel}

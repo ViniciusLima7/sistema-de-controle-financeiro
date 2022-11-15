@@ -23,7 +23,8 @@ export default function Home() {
           </Text>
           <Text size="48px" lineHeight="63px" width="408px" marginLeft="100px">
             Aqui você sabe para onde seu{" "}
-            <img src={money} alt="Saco de Dinheiro"></img> está indo.
+            <img title="Dinheiro" src={money} alt="Saco de Dinheiro"></img> está
+            indo.
           </Text>
           <Text paddingTop="120px" size="17px" lineHeight="22px">
             Cuide do seu dinheiro{" "}

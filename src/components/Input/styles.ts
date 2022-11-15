@@ -1,20 +1,7 @@
 import styled from "styled-components";
+import { IInput } from "../../interfaces/IInput";
 
-interface PropInput {
-  width?: string;
-  height?: string;
-}
-
-interface PropLabel {
-  widthLabel?: string;
-  heightLabel?: string;
-  marginBottom?: string;
-}
-
-export const InputStyle = styled.input.attrs((props: PropInput) => ({
-  width: props.width,
-  height: props.height,
-}))<PropInput>`
+export const InputStyle = styled.input<IInput>`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   outline: none;
@@ -50,11 +37,7 @@ export const InputStyle = styled.input.attrs((props: PropInput) => ({
   }
 `;
 
-export const Label = styled.label.attrs((props: PropLabel) => ({
-  width: props.widthLabel,
-  height: props.heightLabel,
-  marginBottom: props.marginBottom,
-}))<PropLabel>`
+export const Label = styled.label<IInput>`
   width: ${(props) => props.widthLabel};
   height: ${(props) => props.heightLabel};
   border-radius: 15px;

@@ -1,11 +1,8 @@
+import { IAction } from "../../interfaces/IAction";
 import ModalDelete from "../Modal/ModalDelete";
 import ModalEdit from "../Modal/ModalEdit";
 
-interface ActionsProps {
-  title?: string;
-}
-
-export default function Actions({ title = "registro" }: ActionsProps) {
+export default function Actions({ title = "registro" }: IAction) {
   return (
     <>
       <ModalEdit title={title} />

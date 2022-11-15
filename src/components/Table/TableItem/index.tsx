@@ -1,11 +1,8 @@
+import { ITable } from "../../../interfaces/ITable";
 import Actions from "../../Actions";
 import Row from "../Row";
 
-interface TableItemProps {
-  title?: string;
-}
-
-export default function TableItem({ title }: TableItemProps) {
+export default function TableItem({ title }: ITable) {
   return (
     <>
       <tr>

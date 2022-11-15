@@ -1,13 +1,10 @@
+import { ITable } from "../../../interfaces/ITable";
 import ModalAdd from "../../Modal/ModalAdd";
 import Column from "../Column";
 import TableItem from "../TableItem";
 import { Container } from "./styles";
 
-interface TableAreaProps {
-  title?: string;
-}
-
-export default function TableArea({ title }: TableAreaProps) {
+export default function TableArea({ title }: ITable) {
   return (
     <Container>
       <ModalAdd

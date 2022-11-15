@@ -1,19 +1,6 @@
 import { color } from "@mui/system";
 import styled from "styled-components";
-
-interface PropText {
-  color?: string;
-  size?: string;
-  lineHeight?: string;
-  width?: string;
-  marginLeft?: string;
-  paddingTop?: string;
-  paddingBottom?: string;
-}
-
-interface PropTextColor {
-  color?: string;
-}
+import { IText } from "../../interfaces/IText";
 
 export const Box = styled.div`
   margin-left: 140px;
@@ -23,15 +10,7 @@ export const Box = styled.div`
   }
 `;
 
-export const Text = styled.p.attrs((props: PropText) => ({
-  color: props.color,
-  size: props.size,
-  lineHeight: props.lineHeight,
-  width: props.width,
-  marginLeft: props.marginLeft,
-  paddingTop: props.paddingTop,
-  paddingBottom: props.paddingBottom,
-}))<PropText>`
+export const Text = styled.p<IText>`
   font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 400;
@@ -54,9 +33,7 @@ export const Text = styled.p.attrs((props: PropText) => ({
   }
 `;
 
-export const TextColor = styled.span.attrs((props: PropTextColor) => ({
-  color: props.color,
-}))<PropTextColor>`
+export const TextColor = styled.span<IText>`
   color: ${(props) => props.color};
 `;
 

@@ -1,13 +1,5 @@
-import { width } from "@mui/system";
 import styled from "styled-components";
-
-interface PropInput {
-  width?: string;
-}
-
-interface PropSelect {
-  width?: string;
-}
+import { IInput } from "../../interfaces/IInput";
 
 export const Container = styled.div<{ top?: string }>`
   position: absolute;
@@ -73,9 +65,9 @@ export const Title = styled.div`
   }
 `;
 
-export const Input = styled.input.attrs(({ width = "100%" }: PropInput) => ({
+export const Input = styled.input.attrs(({ width = "100%" }: IInput) => ({
   width: width,
-}))<PropInput>`
+}))<IInput>`
   width: ${({ width }) => width};
   height: 30px;
   padding: 0 5px;
@@ -88,7 +80,6 @@ export const Input = styled.input.attrs(({ width = "100%" }: PropInput) => ({
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
-  /* text-align: center; */
   color: var(--black);
 
   ::placeholder {
@@ -108,9 +99,9 @@ export const Input = styled.input.attrs(({ width = "100%" }: PropInput) => ({
   }
 `;
 
-export const Select = styled.select.attrs(({ width = "100%" }: PropSelect) => ({
+export const Select = styled.select.attrs(({ width = "100%" }: IInput) => ({
   width: width,
-}))<PropInput>`
+}))<IInput>`
   width: ${({ width }) => width};
   height: 30px;
   padding: 0 1px;

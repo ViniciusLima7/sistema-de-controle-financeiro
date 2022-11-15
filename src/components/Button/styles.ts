@@ -1,30 +1,7 @@
 import styled from "styled-components";
+import { IButton } from "../../interfaces/IButton";
 
-interface PropButton {
-  background: string;
-  hoverBg: string;
-  width: string;
-  height: string;
-  justifyContent: string;
-  marginTop: string;
-  marginBottom: string;
-  borderRadius: string;
-}
-
-interface PropText {
-  paddingLeft?: string;
-}
-
-export const Botao = styled.button.attrs((props: PropButton) => ({
-  background: props.background,
-  hoverBg: props.hoverBg,
-  width: props.width,
-  height: props.height,
-  justifyContent: props.justifyContent,
-  marginTop: props.marginTop,
-  marginBottom: props.marginBottom,
-  borderRadius: props.borderRadius,
-}))<PropButton>`
+export const Botao = styled.button<IButton>`
   box-sizing: border-box;
 
   width: ${(props) => props.width};
@@ -65,8 +42,6 @@ export const Botao = styled.button.attrs((props: PropButton) => ({
   }
 `;
 
-export const Text = styled.p.attrs(({ paddingLeft }: PropText) => ({
-  paddingLeft,
-}))<PropText>`
+export const Text = styled.p<IButton>`
   padding-left: ${({ paddingLeft }) => paddingLeft};
 `;

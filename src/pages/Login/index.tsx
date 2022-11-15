@@ -15,10 +15,11 @@ import {
 } from "./styles";
 import { ModalSubscribe } from "../../components/Modal/ModalSubscribe";
 import { NavLink } from "react-router-dom";
+import { ModalResetPassword } from "../../components/Modal/ModalResetPassword";
 export function Login() {
   return (
     <ContainerBG>
-      <NavLink to="../inscreva-se">
+      <NavLink to="../inscreva-se" style={{ textDecoration: "none" }}>
         <ModalSubscribe />
       </NavLink>
       <Title>SISTEMA DE CONTROLE FINANCEIRO</Title>
@@ -44,8 +45,10 @@ export function Login() {
           heightLabel="72px"
           marginBottom="10px"
         ></Input>
-        <Text>Esqueceu a senha?</Text>
-        <NavLink to="../inicio">
+        <NavLink to="../resetpassword" style={{ textDecoration: "none" }}>
+          <ModalResetPassword />
+        </NavLink>
+        <NavLink to="../inicio" style={{ textDecoration: "none" }}>
           <Button text="Entrar"></Button>
         </NavLink>
         <Line color="var(--white-100)">
