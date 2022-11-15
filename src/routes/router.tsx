@@ -5,6 +5,7 @@ import Cadastro from "../pages/Cadastro";
 import Categorias from "../pages/Categorias";
 import Dashboard from "../pages/Dashboard";
 import Economias from "../pages/Economias";
+import Erro404 from "../pages/Erro404";
 import Home from "../pages/Home";
 import { Login } from "../pages/Login";
 import Responsaveis from "../pages/Responsaveis";
@@ -123,5 +124,6 @@ export const router = createBrowserRouter([
         element: <Responsaveis />,
       },
     ],
+    errorElement: <Erro404 />,
   },
 ]);
