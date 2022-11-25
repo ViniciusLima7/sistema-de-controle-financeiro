@@ -12,6 +12,7 @@ export function Input({
   widthLabel,
   heightLabel,
   marginBottom = "2px",
+  onChange,
 }: IInput) {
   return (
     <Label
@@ -27,6 +28,7 @@ export function Input({
         width={width}
         height={height}
         autoComplete="on"
+        onChange={onChange}
       />
     </Label>
   );

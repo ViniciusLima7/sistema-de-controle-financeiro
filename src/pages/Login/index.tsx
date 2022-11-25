@@ -9,14 +9,62 @@ import {
   Link,
   Rodape,
   SubTitle,
-  Text,
   TextLine,
   Title,
 } from "./styles";
 import { ModalSubscribe } from "../../components/Modal/ModalSubscribe";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { ModalResetPassword } from "../../components/Modal/ModalResetPassword";
+import { useState } from "react";
+import { auth } from "../../services/firebase-config";
+import {
+  GoogleAuthProvider,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
+const provider = new GoogleAuthProvider();
+
 export function Login() {
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const [user, setUser] = useState({});
+
+  const navigate = useNavigate();
+
+  function loginInSuccess() {
+    user ? navigate("/inicio") : "";
+  }
+
+  async function login() {
+    try {
+      const loginData = await signInWithEmailAndPassword(
+        auth,
+        loginEmail,
+        loginPassword
+      );
+      setUser(loginData);
+      console.log(user);
+      loginInSuccess();
+    } catch (error: any) {
+      console.log(error.message);
+    }
+  }
+
+  async function registerAndSignWithGoogle() {
+    try {
+      const loginData = await signInWithPopup(auth, provider);
+      setUser(loginData);
+      console.log(loginData);
+      loginInSuccess();
+    } catch (error: any) {
+      console.log(error);
+    }
+  }
+  async function logout() {
+    await signOut(auth);
+  }
+
   return (
     <ContainerBG>
       <NavLink to="../inscreva-se" style={{ textDecoration: "none" }}>
@@ -34,6 +82,9 @@ export function Login() {
           widthLabel="400px"
           heightLabel="72px"
           marginBottom="10px"
+          onChange={(event) => {
+            setLoginEmail(event.target.value);
+          }}
         />
         <Input
           placeholder="Digite sua senha"
@@ -44,13 +95,14 @@ export function Login() {
           widthLabel="400px"
           heightLabel="72px"
           marginBottom="10px"
+          onChange={(event) => {
+            setLoginPassword(event.target.value);
+          }}
         ></Input>
         <NavLink to="../resetpassword" style={{ textDecoration: "none" }}>
           <ModalResetPassword />
         </NavLink>
-        <NavLink to="../inicio" style={{ textDecoration: "none" }}>
-          <Button text="Entrar"></Button>
-        </NavLink>
+        <Button onClick={login} text="Entrar"></Button>
         <Line color="var(--white-100)">
           <TextLine color="var(--white-100);">ou</TextLine>
         </Line>
@@ -58,6 +110,7 @@ export function Login() {
           background="var(--red-500)"
           hoverBg="var(--red-800)"
           text="Entrar com Google"
+          onClick={registerAndSignWithGoogle}
         ></Button>
       </FormLogin>
       <footer>
