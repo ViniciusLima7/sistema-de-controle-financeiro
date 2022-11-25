@@ -10,4 +10,5 @@ export interface IInput {
   widthLabel?: string;
   heightLabel?: string;
   marginBottom?: string;
+  onChange?: (event: any) => void;
 }
