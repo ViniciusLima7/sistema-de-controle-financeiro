@@ -23,6 +23,7 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
+import getCurrentYear from "../../utils/getCurrentYear";
 const provider = new GoogleAuthProvider();
 
 export function Login() {
@@ -31,6 +32,8 @@ export function Login() {
   const [user, setUser] = useState({});
 
   const navigate = useNavigate();
+
+  const currentYear = getCurrentYear();
 
   function loginInSuccess() {
     user ? navigate("/inicio") : "";
@@ -118,7 +121,9 @@ export function Login() {
           href="https://www.linkedin.com/in/marcos-vinicius-lima/"
           target="_blank"
         >
-          <Rodape>© 2022 - V7-WEB - Todos os direitos reservados</Rodape>
+          <Rodape>
+            © {currentYear} - V7-WEB - Todos os direitos reservados
+          </Rodape>
         </Link>
       </footer>
     </ContainerBG>
