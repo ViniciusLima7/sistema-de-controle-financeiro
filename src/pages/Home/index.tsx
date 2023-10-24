@@ -6,6 +6,8 @@ import Footer from "../../components/Footer";
 import { Fragment } from "../Cadastro/styles";
 
 export default function Home() {
+  const width = window.innerWidth;
+  console.log("largura", width);
   return (
     <Fragment>
       <Header />
@@ -39,7 +41,10 @@ export default function Home() {
       </div>
       {/* Content */}
 
-      <Footer />
+      <Footer
+        top={width > 1920 ? "93%" : width > 1280 ? "119%" : "94%"}
+        marginTop={width > 1200 && width < 1279 ? "26.1%" : undefined}
+      />
     </Fragment>
   );
 }
