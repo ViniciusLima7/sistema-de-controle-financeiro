@@ -9,24 +9,14 @@ import { Fragment } from "../Cadastro/styles";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../services/firebase-config";
 import { ICategory } from "../../interfaces/ICategory";
+import { getUsers } from "../../services/getCategories";
 
 export default function Categorias() {
   const [categories, setCategories] = useState<ICategory[] | any>([]);
   const categoriesCollectionRef = collection(db, "categories");
 
-  const getUsers = async () => {
-    try {
-      const data = await getDocs(categoriesCollectionRef);
-      setCategories(
-        data.docs.map((document) => ({ ...document.data(), id: document.id }))
-      );
-    } catch (error) {
-      console.log("error", error);
-    }
-  };
-
   useEffect(() => {
-    getUsers();
+    getUsers(setCategories);
   }, []);
 
   return (
