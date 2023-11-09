@@ -15,8 +15,3 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
-
-export async function deleteCategory(id: string) {
-  const categoriesDoc = doc(db, "categories", id);
-  await deleteDoc(categoriesDoc);
-}

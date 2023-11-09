@@ -6,7 +6,7 @@ import { Button } from "../../Button";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { IModal } from "../../../interfaces/IModal";
-import { deleteCategory } from "../../../services/firebase-config";
+import { deleteCategory } from "../../../services/db/firestore/categories/deleteCategory";
 
 export default function ModalDelete({ title = "registro", data }: IModal) {
   const [open, setOpen] = useState(false);

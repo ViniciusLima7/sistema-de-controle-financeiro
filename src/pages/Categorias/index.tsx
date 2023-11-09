@@ -6,14 +6,11 @@ import Column from "../../components/Table/Column";
 import Row from "../../components/Table/Row";
 import { Container } from "../../components/Table/TableArea/styles";
 import { Fragment } from "../Cadastro/styles";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../services/firebase-config";
 import { ICategory } from "../../interfaces/ICategory";
-import { getCategories } from "../../services/getCategories";
+import { getCategories } from "../../services/db/firestore/categories/getCategories";
 
 export default function Categorias() {
   const [categories, setCategories] = useState<ICategory[] | any>([]);
-  const categoriesCollectionRef = collection(db, "categories");
 
   useEffect(() => {
     getCategories(setCategories);
