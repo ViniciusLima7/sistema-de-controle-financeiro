@@ -5,6 +5,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../../../../services/firebase-config";
 import { GroupButtom } from "../styles";
 import { Button } from "../../../../Button";
+import { generateIDCategories } from "../../../../../services/getCategories";
 
 interface AddCategoriaProps {
   onClose: () => void;
@@ -19,6 +20,7 @@ export default function AddCategoria({ onClose }: AddCategoriaProps) {
     const category = await addDoc(categoriesCollectionRef, {
       name,
       color,
+      idCategory: await generateIDCategories(),
     });
     onClose();
   }
