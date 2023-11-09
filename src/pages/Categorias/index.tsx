@@ -59,7 +59,7 @@ export default function Categorias() {
                     display="flex"
                     marginLeft="-20px"
                   >
-                    <Actions title="Categorias" />
+                    <Actions title="Categorias" data={category} />
                   </Row>
                 </tr>
               );
