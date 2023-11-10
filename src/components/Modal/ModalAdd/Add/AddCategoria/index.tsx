@@ -6,12 +6,9 @@ import { db } from "../../../../../services/firebase-config";
 import { GroupButtom } from "../styles";
 import { Button } from "../../../../Button";
 import { generateIDCategories } from "../../../../../services/db/firestore/categories/getCategories";
+import { IModalCloser } from "../../../../../interfaces/IModalCloser";
 
-interface AddCategoriaProps {
-  onClose: () => void;
-}
-
-export default function AddCategoria({ onClose }: AddCategoriaProps) {
+export default function AddCategoria({ onClose }: IModalCloser) {
   const [name, setName] = useState<string>("");
   const [color, setColor] = useState<string>("");
   const categoriesCollectionRef = collection(db, "categories");

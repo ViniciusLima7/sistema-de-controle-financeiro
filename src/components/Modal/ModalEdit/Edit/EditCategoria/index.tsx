@@ -4,8 +4,12 @@ import { Container } from "../../../ModalEdit/styles";
 import { GroupButtom } from "../styles";
 import { Button } from "../../../../Button";
 import { updateCategory } from "../../../../../services/db/firestore/categories/updateCategory";
+import { IModalCloser } from "../../../../../interfaces/IModalCloser";
 
-export default function EditCategoria({ category }: any) {
+export default function EditCategoria({
+  category,
+  onClose,
+}: { onClose: IModalCloser } & any) {
   const [name, setName] = useState<string>(category?.name);
   const [color, setColor] = useState<string>(category?.color);
 
@@ -31,10 +35,10 @@ export default function EditCategoria({ category }: any) {
         if (Object.keys(updatedFields).length > 0) {
           await updateCategory(category?.id, updatedFields);
         }
-        // handleClose();
+        onClose();
       }
     } catch (error) {
-      console.log("🚀 ~ file: index.tsx:30 ~ updateData ~ error:", error);
+      console.log("error:", error);
     }
   }
 
@@ -69,6 +73,7 @@ export default function EditCategoria({ category }: any) {
           background="var(--red-500)"
           hoverBg="var(--red-800)"
           marginBottom="30px"
+          onClick={onClose}
         ></Button>
       </GroupButtom>
     </>
