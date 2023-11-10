@@ -1,8 +1,7 @@
 import ButtonMui from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import { Pencil } from "phosphor-react";
-import { Box, GroupButtom, Text } from "./styles";
-import { Button } from "../../Button";
+import { Box, Text } from "./styles";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -13,7 +12,7 @@ import EditEconomia from "./Edit/EditEconomia";
 import EditResponsavel from "./Edit/EditResponsavel";
 import { IModal } from "../../../interfaces/IModal";
 
-export default function ModalEdit({ title = "registro" }: IModal) {
+export default function ModalEdit({ title = "registro", data }: IModal) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -32,7 +31,7 @@ export default function ModalEdit({ title = "registro" }: IModal) {
           {title === "Cadastro" ? (
             <EditCadastro />
           ) : title === "Categorias" ? (
-            <EditCategoria />
+            <EditCategoria category={data} />
           ) : title === "SubCategorias" ? (
             <EditSubCategoria />
           ) : title === "Economias" ? (
@@ -40,17 +39,6 @@ export default function ModalEdit({ title = "registro" }: IModal) {
           ) : (
             <EditResponsavel />
           )}
-
-          <GroupButtom width="280px">
-            <Button width="119px" text="Salvar"></Button>
-            <Button
-              width="119px"
-              text="Cancelar"
-              background="var(--red-500)"
-              hoverBg="var(--red-800)"
-              marginBottom="30px"
-            ></Button>
-          </GroupButtom>
         </Box>
       </Modal>
     </>

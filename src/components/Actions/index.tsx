@@ -5,7 +5,7 @@ import ModalEdit from "../Modal/ModalEdit";
 export default function Actions({ title = "registro", data }: ITitle) {
   return (
     <>
-      <ModalEdit title={title} />
+      <ModalEdit title={title} data={data} />
       <ModalDelete title={title} data={data} />
     </>
   );
