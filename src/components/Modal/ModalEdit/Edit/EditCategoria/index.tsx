@@ -5,6 +5,7 @@ import { GroupButtom } from "../styles";
 import { Button } from "../../../../Button";
 import { updateCategory } from "../../../../../services/db/firestore/categories/updateCategory";
 import { IModalCloser } from "../../../../../interfaces/IModalCloser";
+import ReactLoading from "react-loading";
 
 export default function EditCategoria({
   category,
@@ -12,6 +13,7 @@ export default function EditCategoria({
 }: { onClose: IModalCloser } & any) {
   const [name, setName] = useState<string>(category?.name);
   const [color, setColor] = useState<string>(category?.color);
+  const [loading, setLoading] = useState<boolean>(false);
 
   function getUpdatedFields(): { name?: string; color?: string } {
     const updatedFields: { name?: string; color?: string } = {};
@@ -29,6 +31,7 @@ export default function EditCategoria({
 
   async function updateData() {
     try {
+      setLoading(true);
       if (category) {
         const updatedFields = getUpdatedFields();
 
@@ -36,9 +39,11 @@ export default function EditCategoria({
           await updateCategory(category?.id, updatedFields);
         }
         onClose();
+        setLoading(false);
       }
     } catch (error) {
       console.log("error:", error);
+      setLoading(false);
     }
   }
 
@@ -66,7 +71,11 @@ export default function EditCategoria({
         </Container>
       </Container>
       <GroupButtom width="280px">
-        <Button width="119px" text="Salvar" onClick={updateData}></Button>
+        {loading ? (
+          <ReactLoading type="spokes" color="var(--blue-600)" />
+        ) : (
+          <Button width="119px" text="Salvar" onClick={updateData}></Button>
+        )}
         <Button
           width="119px"
           text="Cancelar"
