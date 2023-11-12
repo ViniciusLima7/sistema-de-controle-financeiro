@@ -7,19 +7,26 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { IModal } from "../../../interfaces/IModal";
 import { deleteCategory } from "../../../services/db/firestore/categories/deleteCategory";
+import ReactLoading from "react-loading";
 
 export default function ModalDelete({ title = "registro", data }: IModal) {
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   function deleteDataForId() {
     try {
+      setLoading(true);
       if (data) {
         deleteCategory(data?.id);
         handleClose();
       }
-    } catch (error) {}
+      setLoading(false);
+    } catch (error) {
+      console.log("error:", error);
+      setLoading(false);
+    }
   }
 
   return (
@@ -34,11 +41,15 @@ export default function ModalDelete({ title = "registro", data }: IModal) {
           <Title>Excluir {title}</Title>
           <Text>Tem certeza que deseja excluir esse registro?</Text>
           <Container>
-            <Button
-              width="139px"
-              text="Sim"
-              onClick={() => deleteDataForId()}
-            ></Button>
+            {loading ? (
+              <ReactLoading type="spokes" color="var(--blue-600)" />
+            ) : (
+              <Button
+                width="139px"
+                text="Sim"
+                onClick={() => deleteDataForId()}
+              ></Button>
+            )}
             <Button
               width="139px"
               text="Não"
