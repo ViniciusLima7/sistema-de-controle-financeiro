@@ -1,25 +1,27 @@
 import { useState } from "react";
 import { Input, InputLabel, Title } from "../../../../InputArea/styles";
 import { Container } from "../../../ModalEdit/styles";
-import { addDoc, collection } from "firebase/firestore";
-import { db } from "../../../../../services/firebase-config";
 import { GroupButtom } from "../styles";
 import { Button } from "../../../../Button";
-import { generateIDCategories } from "../../../../../services/db/firestore/categories/getCategories";
 import { IModalCloser } from "../../../../../interfaces/IModalCloser";
+import { createCategory } from "../../../../../services/db/firestore/categories/createCategory";
+import ReactLoading from "react-loading";
 
 export default function AddCategoria({ onClose }: IModalCloser) {
   const [name, setName] = useState<string>("");
   const [color, setColor] = useState<string>("");
-  const categoriesCollectionRef = collection(db, "categories");
+  const [loading, setLoading] = useState<boolean>(false);
 
   async function addCategory() {
-    const category = await addDoc(categoriesCollectionRef, {
-      name,
-      color,
-      idCategory: await generateIDCategories(),
-    });
-    onClose();
+    try {
+      setLoading(true);
+      await createCategory(name, color);
+      onClose();
+      setLoading(false);
+    } catch (error) {
+      console.error("error:", error);
+      setLoading(false);
+    }
   }
 
   return (
@@ -46,7 +48,11 @@ export default function AddCategoria({ onClose }: IModalCloser) {
         </Container>
       </Container>
       <GroupButtom width="280px">
-        <Button width="119px" text="Salvar" onClick={addCategory}></Button>
+        {loading ? (
+          <ReactLoading type="spokes" color="var(--blue-600)" />
+        ) : (
+          <Button width="119px" text="Salvar" onClick={addCategory}></Button>
+        )}
         <Button
           width="119px"
           text="Cancelar"
