@@ -2,7 +2,7 @@ import Modal from "@mui/material/Modal";
 import { Box, Text } from "./styles";
 import { Button } from "../../Button";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import AddCategoria from "./Add/AddCategoria";
 import AddCadastro from "./Add/AddCadastro";
@@ -18,9 +18,13 @@ export default function ModalAdd({
   width,
 }: IModal) {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const navigate = useNavigate();
 
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => {
+    setOpen(false);
+    navigate(`/${title.toLowerCase()}`);
+  };
   return (
     <>
       <NavLink

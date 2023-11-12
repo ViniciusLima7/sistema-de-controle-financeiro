@@ -4,7 +4,7 @@ import { Trash } from "phosphor-react";
 import { Box, Container, Text, Title } from "./styles";
 import { Button } from "../../Button";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { IModal } from "../../../interfaces/IModal";
 import { deleteCategory } from "../../../services/db/firestore/categories/deleteCategory";
 import ReactLoading from "react-loading";
@@ -12,9 +12,13 @@ import ReactLoading from "react-loading";
 export default function ModalDelete({ title = "registro", data }: IModal) {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState<boolean>(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const navigate = useNavigate();
 
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => {
+    setOpen(false);
+    navigate(`/${title.toLowerCase()}`);
+  };
   function deleteDataForId() {
     try {
       setLoading(true);

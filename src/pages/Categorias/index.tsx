@@ -14,7 +14,7 @@ export default function Categorias() {
 
   useEffect(() => {
     getCategories(setCategories);
-  }, []);
+  }, [categories]);
 
   return (
     <Fragment>

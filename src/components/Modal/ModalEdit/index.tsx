@@ -3,7 +3,7 @@ import Modal from "@mui/material/Modal";
 import { Pencil } from "phosphor-react";
 import { Box, Text } from "./styles";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import EditCategoria from "./Edit/EditCategoria";
 import EditCadastro from "./Edit/EditCadastro";
@@ -14,9 +14,14 @@ import { IModal } from "../../../interfaces/IModal";
 
 export default function ModalEdit({ title = "registro", data }: IModal) {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
 
+  const navigate = useNavigate();
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => {
+    setOpen(false);
+    navigate(`/${title.toLowerCase()}`);
+  };
   return (
     <>
       <ButtonMui onClick={handleOpen}>
