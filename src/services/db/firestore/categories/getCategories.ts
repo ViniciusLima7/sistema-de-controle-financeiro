@@ -22,7 +22,8 @@ export const getCategories = async (
 export const generateIDCategories = async () => {
   try {
     const data = await getDocs(categoriesCollectionRef);
-    return data && data.docs.length + 1;
+    const maxID = Math.max(...data.docs.map((doc) => doc.data().idCategory), 0);
+    return maxID + 1;
   } catch (error) {
     console.log("error", error);
   }
