@@ -1,10 +1,11 @@
 import { addDoc } from "firebase/firestore";
-import { categoriesCollectionRef, generateIDCategories } from "./getCategories";
+import { categoriesCollectionRef } from "./getCategories";
+import { generateID } from "../../../../utils/generateID";
 
 export async function createCategory(name: string, color: string) {
   await addDoc(categoriesCollectionRef, {
     name,
     color,
-    idCategory: await generateIDCategories(),
+    idCategory: await generateID(categoriesCollectionRef, "idCategory"),
   });
 }
