@@ -8,6 +8,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { IModal } from "../../../interfaces/IModal";
 import { deleteCategory } from "../../../services/db/firestore/categories/deleteCategory";
 import ReactLoading from "react-loading";
+import { deleteSubCategory } from "../../../services/db/firestore/subcategories/deleteSubCategory";
 
 export default function ModalDelete({ title = "registro", data }: IModal) {
   const [open, setOpen] = useState(false);
@@ -23,7 +24,11 @@ export default function ModalDelete({ title = "registro", data }: IModal) {
     try {
       setLoading(true);
       if (data) {
-        deleteCategory(data?.id);
+        if (title.toLowerCase() === "subcategorias") {
+          deleteSubCategory(data?.id);
+        } else {
+          deleteCategory(data?.id);
+        }
         handleClose();
       }
       setLoading(false);

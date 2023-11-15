@@ -48,7 +48,7 @@ export default function SubCategorias() {
                     display="flex"
                     marginLeft="-20px"
                   >
-                    <Actions title="SubCategorias" data={subCategories} />
+                    <Actions title="SubCategorias" data={subCategory} />
                   </Row>
                 </tr>
               );
