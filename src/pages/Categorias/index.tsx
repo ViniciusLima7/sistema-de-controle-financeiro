@@ -13,8 +13,10 @@ export default function Categorias() {
   const [categories, setCategories] = useState<ICategory[] | any>([]);
 
   useEffect(() => {
-    getCategories(setCategories);
-  }, [categories]);
+    if (location.pathname === "/categorias") {
+      getCategories(setCategories);
+    }
+  }, [location.pathname]);
 
   return (
     <Fragment>

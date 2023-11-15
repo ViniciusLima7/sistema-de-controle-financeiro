@@ -13,8 +13,11 @@ export default function SubCategorias() {
   const [subCategories, setSubCategories] = useState<ISubCategory[] | any>([]);
 
   useEffect(() => {
-    getSubCategories(setSubCategories);
-  }, [subCategories]);
+    if (location.pathname === "/subcategorias") {
+      getSubCategories(setSubCategories);
+    }
+  }, [location.pathname]);
+
   return (
     <Fragment>
       <Header />
@@ -45,7 +48,7 @@ export default function SubCategorias() {
                     display="flex"
                     marginLeft="-20px"
                   >
-                    <Actions title="SubCategorias" />
+                    <Actions title="SubCategorias" data={subCategories} />
                   </Row>
                 </tr>
               );
