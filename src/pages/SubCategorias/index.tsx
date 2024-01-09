@@ -8,15 +8,39 @@ import { Container } from "../../components/Table/TableArea/styles";
 import { Fragment } from "../Cadastro/styles";
 import { ISubCategory } from "../../interfaces/ISubCategory";
 import { getSubCategories } from "../../services/db/firestore/subcategories/getSubCategories";
+import { getCategoryNameById } from "../../services/db/firestore/categories/getCategories";
 
 export default function SubCategorias() {
   const [subCategories, setSubCategories] = useState<ISubCategory[] | any>([]);
+  const [categoryNames, setCategoryNames] = useState<Record<string, string>>(
+    {}
+  );
 
   useEffect(() => {
     if (location.pathname === "/subcategorias") {
       getSubCategories(setSubCategories);
     }
   }, [location.pathname]);
+
+  useEffect(() => {
+    const fetchCategoryNames = async () => {
+      const categoryIds = subCategories.map(
+        (subCategory: ISubCategory) => subCategory.FK_IdCategory
+      );
+      const categoryNamePromises = categoryIds.map((categoryId) =>
+        getCategoryNameById(categoryId)
+      );
+      const categoryNamesArray = await Promise.all(categoryNamePromises);
+      const categoryNamesObj: Record<string, string> = {};
+      categoryIds.forEach((categoryId, index) => {
+        categoryNamesObj[categoryId] = categoryNamesArray[index];
+      });
+      setCategoryNames(categoryNamesObj);
+    };
+    if (subCategories.length > 0) {
+      fetchCategoryNames();
+    }
+  }, [subCategories]);
 
   return (
     <Fragment>
@@ -42,7 +66,10 @@ export default function SubCategorias() {
                 <tr key={subCategory.id}>
                   <Row>{subCategory.idSubCategory}</Row>
                   <Row>{subCategory.name}</Row>
-                  <Row>{subCategory.FK_IdCategory}</Row>
+                  <Row>
+                    {categoryNames[subCategory.FK_IdCategory] ||
+                      "Carregando..."}
+                  </Row>
                   <Row
                     justifyContent="space-evenly"
                     display="flex"
