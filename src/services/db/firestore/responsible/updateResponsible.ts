@@ -1,11 +1,11 @@
 import { updateDoc, doc } from "firebase/firestore";
 import { db } from "../../../firebase-config";
 
-export const updateEconomy = async (id: string, updatedData: any) => {
-  const economyDoc = doc(db, "savings", id);
+export const updateResponsible = async (id: string, updatedData: any) => {
+  const responsibleDoc = doc(db, "responsible", id);
 
   try {
-    await updateDoc(economyDoc, updatedData);
+    await updateDoc(responsibleDoc, updatedData);
   } catch (error) {
     console.error("Error updating document: ", error);
   }

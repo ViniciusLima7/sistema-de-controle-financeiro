@@ -1,17 +1,17 @@
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../../../firebase-config";
 
-export const savingsCollectionRef = collection(db, "savings");
+export const responsibleCollectionRef = collection(db, "savings");
 
-export const getSavings = async (
-  setSavings: React.Dispatch<any>,
-  orderByField: string = "idEconomy"
+export const getResponsible = async (
+  setResponsible: React.Dispatch<any>,
+  orderByField: string = "idResponsible"
 ) => {
   try {
     const data = await getDocs(
-      query(savingsCollectionRef, orderBy(orderByField))
+      query(responsibleCollectionRef, orderBy(orderByField))
     );
-    setSavings(
+    setResponsible(
       data.docs.map((document) => ({ ...document.data(), id: document.id }))
     );
   } catch (error) {
