@@ -38,7 +38,7 @@ export default function ModalEdit({ title = "registro", data }: IModal) {
           ) : title === "Categorias" ? (
             <EditCategoria category={data} onClose={handleClose} />
           ) : title === "SubCategorias" ? (
-            <EditSubCategoria />
+            <EditSubCategoria subCategory={data} onClose={handleClose} />
           ) : title === "Economias" ? (
             <EditEconomia />
           ) : (
