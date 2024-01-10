@@ -51,7 +51,7 @@ export default function ModalAdd({
           ) : title === "Economias" ? (
             <AddEconomia />
           ) : (
-            <AddResponsavel />
+            <AddResponsavel onClose={handleClose} />
           )}
         </Box>
       </Modal>
