@@ -1,7 +1,7 @@
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../../../firebase-config";
 
-export const responsibleCollectionRef = collection(db, "savings");
+export const responsibleCollectionRef = collection(db, "responsible");
 
 export const getResponsible = async (
   setResponsible: React.Dispatch<any>,

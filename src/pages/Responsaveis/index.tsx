@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Actions from "../../components/Actions";
 import Header from "../../components/Header";
 import ModalAdd from "../../components/Modal/ModalAdd";
@@ -5,8 +6,17 @@ import Column from "../../components/Table/Column";
 import Row from "../../components/Table/Row";
 import { Container } from "../../components/Table/TableArea/styles";
 import { Fragment } from "../Cadastro/styles";
+import { getResponsible } from "../../services/db/firestore/responsible/getResponsible";
+import { IResponsible } from "../../interfaces/IResponsible";
 
 export default function Responsaveis() {
+  const [responsible, setResponsible] = useState<IResponsible[]>([]);
+
+  useEffect(() => {
+    if (location.pathname === "/responsaveis") {
+      getResponsible(setResponsible);
+    }
+  }, [location.pathname]);
   return (
     <Fragment>
       <Header />
@@ -25,28 +35,21 @@ export default function Responsaveis() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <Row>1</Row>
-              <Row>Vinicius Lima</Row>
-              <Row
-                justifyContent="space-evenly"
-                display="flex"
-                marginLeft="-20px"
-              >
-                <Actions title="Responsaveis" />
-              </Row>
-            </tr>
-            <tr>
-              <Row>2</Row>
-              <Row>Daiani Lima</Row>
-              <Row
-                justifyContent="space-evenly"
-                display="flex"
-                marginLeft="-20px"
-              >
-                <Actions title="Responsaveis" />
-              </Row>
-            </tr>
+            {responsible.map((responsible) => {
+              return (
+                <tr key={responsible.id}>
+                  <Row>{responsible.idResponsible}</Row>
+                  <Row>{responsible.name}</Row>
+                  <Row
+                    justifyContent="space-evenly"
+                    display="flex"
+                    marginLeft="-20px"
+                  >
+                    <Actions title="Responsaveis" />
+                  </Row>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </Container>
