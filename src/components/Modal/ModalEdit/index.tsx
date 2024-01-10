@@ -1,10 +1,9 @@
 import ButtonMui from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import { Pencil } from "phosphor-react";
-import { Box, GroupButtom, Text } from "./styles";
-import { Button } from "../../Button";
+import { Box, Text } from "./styles";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import EditCategoria from "./Edit/EditCategoria";
 import EditCadastro from "./Edit/EditCadastro";
@@ -13,11 +12,16 @@ import EditEconomia from "./Edit/EditEconomia";
 import EditResponsavel from "./Edit/EditResponsavel";
 import { IModal } from "../../../interfaces/IModal";
 
-export default function ModalEdit({ title = "registro" }: IModal) {
+export default function ModalEdit({ title = "registro", data }: IModal) {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
 
+  const navigate = useNavigate();
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => {
+    setOpen(false);
+    navigate(`/${title.toLowerCase()}`);
+  };
   return (
     <>
       <ButtonMui onClick={handleOpen}>
@@ -32,25 +36,14 @@ export default function ModalEdit({ title = "registro" }: IModal) {
           {title === "Cadastro" ? (
             <EditCadastro />
           ) : title === "Categorias" ? (
-            <EditCategoria />
+            <EditCategoria category={data} onClose={handleClose} />
           ) : title === "SubCategorias" ? (
-            <EditSubCategoria />
+            <EditSubCategoria subCategory={data} onClose={handleClose} />
           ) : title === "Economias" ? (
             <EditEconomia />
           ) : (
             <EditResponsavel />
           )}
-
-          <GroupButtom width="280px">
-            <Button width="119px" text="Salvar"></Button>
-            <Button
-              width="119px"
-              text="Cancelar"
-              background="var(--red-500)"
-              hoverBg="var(--red-800)"
-              marginBottom="30px"
-            ></Button>
-          </GroupButtom>
         </Box>
       </Modal>
     </>

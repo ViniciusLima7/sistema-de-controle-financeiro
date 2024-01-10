@@ -1,8 +1,8 @@
 import Modal from "@mui/material/Modal";
-import { Box, GroupButtom, Text } from "./styles";
+import { Box, Text } from "./styles";
 import { Button } from "../../Button";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import AddCategoria from "./Add/AddCategoria";
 import AddCadastro from "./Add/AddCadastro";
@@ -18,9 +18,13 @@ export default function ModalAdd({
   width,
 }: IModal) {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const navigate = useNavigate();
 
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => {
+    setOpen(false);
+    navigate(`/${title.toLowerCase()}`);
+  };
   return (
     <>
       <NavLink
@@ -41,25 +45,14 @@ export default function ModalAdd({
           {title === "Cadastro" ? (
             <AddCadastro />
           ) : title === "Categorias" ? (
-            <AddCategoria />
+            <AddCategoria onClose={handleClose} />
           ) : title === "SubCategorias" ? (
-            <AddSubCategoria />
+            <AddSubCategoria onClose={handleClose} />
           ) : title === "Economias" ? (
             <AddEconomia />
           ) : (
             <AddResponsavel />
           )}
-
-          <GroupButtom width="280px">
-            <Button width="119px" text="Salvar"></Button>
-            <Button
-              width="119px"
-              text="Cancelar"
-              background="var(--red-500)"
-              hoverBg="var(--red-800)"
-              marginBottom="30px"
-            ></Button>
-          </GroupButtom>
         </Box>
       </Modal>
     </>
