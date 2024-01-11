@@ -42,7 +42,7 @@ export default function ModalEdit({ title = "registro", data }: IModal) {
           ) : title === "Economias" ? (
             <EditEconomia />
           ) : (
-            <EditResponsavel />
+            <EditResponsavel responsible={data} onClose={handleClose} />
           )}
         </Box>
       </Modal>
