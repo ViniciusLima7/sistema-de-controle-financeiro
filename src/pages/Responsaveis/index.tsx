@@ -45,7 +45,7 @@ export default function Responsaveis() {
                     display="flex"
                     marginLeft="-20px"
                   >
-                    <Actions title="Responsaveis" />
+                    <Actions title="Responsaveis" data={responsible} />
                   </Row>
                 </tr>
               );
