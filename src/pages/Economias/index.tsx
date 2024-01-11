@@ -28,7 +28,7 @@ export default function Economias() {
         (economy: IEconomy) => economy.FK_IdResponsible
       );
       const responsibleNamePromises = responsibleIds.map((responsibleId) =>
-        getResponsibleNamebyId(responsibleId.toString())
+        getResponsibleNamebyId(responsibleId)
       );
       const responsibleNamesArray = await Promise.all(responsibleNamePromises);
       const responsibleNamesObj: Record<string, string> = {};

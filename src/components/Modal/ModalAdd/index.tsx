@@ -49,7 +49,7 @@ export default function ModalAdd({
           ) : title === "SubCategorias" ? (
             <AddSubCategoria onClose={handleClose} />
           ) : title === "Economias" ? (
-            <AddEconomia />
+            <AddEconomia onClose={handleClose} />
           ) : (
             <AddResponsavel onClose={handleClose} />
           )}

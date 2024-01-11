@@ -4,5 +4,5 @@ export interface IEconomy {
   ano: string;
   metaEconomy: string;
   idEconomy: number;
-  FK_IdResponsible: number;
+  FK_IdResponsible: string;
 }
