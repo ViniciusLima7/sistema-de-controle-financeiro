@@ -1,4 +1,5 @@
 import { ICategory } from "./ICategory";
+import { IEconomy } from "./IEconomy";
 import { IResponsible } from "./IResponsible";
 import { ISubCategory } from "./ISubCategory";
 
@@ -7,5 +8,5 @@ export interface IModal {
   text?: string;
   marginBottom?: string;
   width?: string;
-  data?: ICategory | ISubCategory | IResponsible;
+  data?: ICategory | ISubCategory | IResponsible | IEconomy;
 }

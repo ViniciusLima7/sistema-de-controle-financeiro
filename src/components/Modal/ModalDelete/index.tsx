@@ -10,6 +10,7 @@ import { deleteCategory } from "../../../services/db/firestore/categories/delete
 import ReactLoading from "react-loading";
 import { deleteSubCategory } from "../../../services/db/firestore/subcategories/deleteSubCategory";
 import { deleteResponsible } from "../../../services/db/firestore/responsible/deleteResponsible";
+import { deleteEconomy } from "../../../services/db/firestore/savings/deleteEconomy";
 
 export default function ModalDelete({ title = "registro", data }: IModal) {
   const [open, setOpen] = useState(false);
@@ -29,6 +30,8 @@ export default function ModalDelete({ title = "registro", data }: IModal) {
           deleteSubCategory(data?.id);
         } else if (title.toLowerCase() === "responsaveis") {
           deleteResponsible(data.id);
+        } else if (title.toLowerCase() === "economias") {
+          deleteEconomy(data.id);
         } else {
           deleteCategory(data?.id);
         }

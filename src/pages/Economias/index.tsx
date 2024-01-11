@@ -91,7 +91,7 @@ export default function Economias() {
                     display="flex"
                     marginLeft="-20px"
                   >
-                    <Actions title="Economias" />
+                    <Actions title="Economias" data={economy} />
                   </Row>
                 </tr>
               );
