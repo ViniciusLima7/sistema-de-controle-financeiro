@@ -17,7 +17,7 @@ import { createSubCategory } from "../../../../../services/db/firestore/subcateg
 
 export default function AddSubCategoria({ onClose }: IModalCloser) {
   const [categories, setCategories] = useState<ICategory[]>([]);
-  const [idSelectedCategory, setIdSelectedCategory] = useState<number>(0);
+  const [idSelectedCategory, setIdSelectedCategory] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 

@@ -19,7 +19,8 @@ import { IModalCloser } from "../../../../../interfaces/IModalCloser";
 
 export default function AddEconomia({ onClose }: IModalCloser) {
   const [responsible, setResponsible] = useState<IResponsible[]>([]);
-  const [idSelectedResponsible, setIdSelectedResponsible] = useState<number>(0);
+  const [idSelectedResponsible, setIdSelectedResponsible] =
+    useState<string>("");
   const [mes, setMes] = useState<number>(0);
   const [ano, setAno] = useState<string>("");
   const [metaEconomy, setMetaEconomy] = useState<number>(0);
@@ -89,7 +90,7 @@ export default function AddEconomia({ onClose }: IModalCloser) {
               width="340px"
               placeholder="Meta"
               value={metaEconomy}
-              onChange={(e) => setMetaEconomy(e.target.value)}
+              onChange={(e) => setMetaEconomy(Number(e.target.value))}
             ></Input>
           </InputLabel>
         </Container>
