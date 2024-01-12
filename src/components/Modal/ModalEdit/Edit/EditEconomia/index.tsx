@@ -131,7 +131,7 @@ export default function EditEconomia({
               width="340px"
               placeholder="Meta"
               value={metaEconomy}
-              onChange={(e) => setMetaEconomy(e.target.value)}
+              onChange={(e) => setMetaEconomy(Number(e.target.value))}
             ></Input>
           </InputLabel>
         </Container>
