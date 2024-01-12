@@ -3,7 +3,7 @@ import { db } from "../../../firebase-config";
 import { generateID } from "../../../../utils/generateID";
 import { subCategoriesCollectionRef } from "./getSubCategories";
 
-export async function createSubCategory(name: string, FK_IdCategory: number) {
+export async function createSubCategory(name: string, FK_IdCategory: string) {
   await addDoc(subCategoriesCollectionRef, {
     name,
     FK_IdCategory,

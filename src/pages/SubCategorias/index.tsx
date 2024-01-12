@@ -11,7 +11,7 @@ import { getSubCategories } from "../../services/db/firestore/subcategories/getS
 import { getCategoryNameById } from "../../services/db/firestore/categories/getCategories";
 
 export default function SubCategorias() {
-  const [subCategories, setSubCategories] = useState<ISubCategory[] | any>([]);
+  const [subCategories, setSubCategories] = useState<ISubCategory[]>([]);
   const [categoryNames, setCategoryNames] = useState<Record<string, string>>(
     {}
   );
