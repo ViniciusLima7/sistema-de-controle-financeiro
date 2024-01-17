@@ -1,11 +1,11 @@
-import { addDoc } from "firebase/firestore";
+import { Timestamp, addDoc } from "firebase/firestore";
 import { transactionsCollectionRef } from "./getTransaction";
 
 export async function createTransaction(
   FK_IdCategory: string,
   FK_IdSubCategory: string,
   FK_Responsible: string,
-  date: Date,
+  date: Timestamp,
   price: number,
   title: string
 ) {
