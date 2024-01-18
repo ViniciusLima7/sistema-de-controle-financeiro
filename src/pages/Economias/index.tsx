@@ -8,7 +8,7 @@ import { Container } from "../../components/Table/TableArea/styles";
 import { IEconomy } from "../../interfaces/IEconomy";
 import { Fragment } from "../Cadastro/styles";
 import { getSavings } from "../../services/db/firestore/savings/getSavings";
-import { getResponsibleNamebyId } from "../../services/db/firestore/responsible/getResponsible";
+import { getResponsibleNameById } from "../../services/db/firestore/responsible/getResponsible";
 
 export default function Economias() {
   const [savings, setSavings] = useState<IEconomy[]>([]);
@@ -28,7 +28,7 @@ export default function Economias() {
         (economy: IEconomy) => economy.FK_IdResponsible
       );
       const responsibleNamePromises = responsibleIds.map((responsibleId) =>
-        getResponsibleNamebyId(responsibleId)
+        getResponsibleNameById(responsibleId)
       );
       const responsibleNamesArray = await Promise.all(responsibleNamePromises);
       const responsibleNamesObj: Record<string, string> = {};

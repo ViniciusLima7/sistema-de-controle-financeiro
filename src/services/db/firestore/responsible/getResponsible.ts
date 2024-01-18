@@ -26,7 +26,7 @@ export const getResponsible = async (
   }
 };
 
-export const getResponsibleNamebyId = async (responsibleId: string) => {
+export const getResponsibleNameById = async (responsibleId: string) => {
   try {
     const responsibleDocRef = doc(db, "responsible", responsibleId);
     const responsibleDocSnapshot = await getDoc(responsibleDocRef);
