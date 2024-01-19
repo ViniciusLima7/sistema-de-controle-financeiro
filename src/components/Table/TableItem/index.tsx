@@ -8,6 +8,7 @@ import { getCategoryNameById } from "../../../services/db/firestore/categories/g
 import { getNamesForIds } from "../../../utils/getNamesForId";
 import { getSubCategoryNameById } from "../../../services/db/firestore/subcategories/getSubCategories";
 import { getResponsibleNameById } from "../../../services/db/firestore/responsible/getResponsible";
+import { format } from "date-fns";
 
 export default function TableItem({ title }: ITable) {
   const [transactions, setTransactions] = useState<ITransaction[]>([]);
@@ -54,7 +55,10 @@ export default function TableItem({ title }: ITable) {
       {transactions.map((transaction) => {
         return (
           <tr key={transaction.id}>
-            <Row>17/01/2024</Row>
+            <Row>
+              {format(transaction?.date?.seconds * 1000, "dd/MM/yyyy") ||
+                "Carregando"}
+            </Row>
             <Row>
               {categoryNames[transaction.FK_IdCategory] || "Carregando..."}
             </Row>

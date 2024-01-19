@@ -18,7 +18,7 @@ import { Button } from "../../../../Button";
 import { createTransaction } from "../../../../../services/db/firestore/transactions/createTransaction";
 import { Timestamp } from "firebase/firestore";
 import { IModalCloser } from "../../../../../interfaces/IModalCloser";
-import moment from "moment";
+import { getCurrentDate } from "../../../../../utils/getCurrentDate";
 
 export default function AddCadastro({ onClose }: IModalCloser) {
   const [responsible, setResponsible] = useState<IResponsible[]>([]);
@@ -29,7 +29,7 @@ export default function AddCadastro({ onClose }: IModalCloser) {
   const [subCategories, setSubCategories] = useState<ISubCategory[]>([]);
   const [idSelectedSubCategory, setIdSelectedSubCategory] =
     useState<string>("");
-  const [date, setDate] = useState<Date>(new Date());
+  const [date, setDate] = useState<Date>(new Date(getCurrentDate()));
   const [price, setPrice] = useState<number>(0);
   const [title, setTitle] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
@@ -77,7 +77,7 @@ export default function AddCadastro({ onClose }: IModalCloser) {
               type="date"
               value={date.toISOString().split("T")[0]}
               onChange={(e) => {
-                setDate(new Date(e.target.value));
+                setDate(new Date(e.target.value + "T00:00:00"));
               }}
             ></Input>
           </InputLabel>
