@@ -34,7 +34,7 @@ export default function ModalEdit({ title = "registro", data }: IModal) {
           <Text>Editar {title}</Text>
 
           {title === "Cadastro" ? (
-            <EditCadastro />
+            <EditCadastro transaction={data} onClose={handleClose} />
           ) : title === "Categorias" ? (
             <EditCategoria category={data} onClose={handleClose} />
           ) : title === "SubCategorias" ? (

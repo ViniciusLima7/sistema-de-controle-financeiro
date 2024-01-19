@@ -43,7 +43,7 @@ export default function ModalAdd({
           <Text>Adicionar {title}</Text>
 
           {title === "Cadastro" ? (
-            <AddCadastro />
+            <AddCadastro onClose={handleClose} />
           ) : title === "Categorias" ? (
             <AddCategoria onClose={handleClose} />
           ) : title === "SubCategorias" ? (
