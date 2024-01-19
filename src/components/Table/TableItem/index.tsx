@@ -67,7 +67,12 @@ export default function TableItem({ title }: ITable) {
                 "Carregando..."}
             </Row>
             <Row>{transaction.title}</Row>
-            <Row>R$ {transaction.price}</Row>
+            <Row>
+              R${" "}
+              {transaction.price.toLocaleString("pt-BR", {
+                minimumFractionDigits: 2,
+              })}
+            </Row>
             <Row>
               {responsibleNames[transaction.FK_Responsible] || "Carregando..."}
             </Row>
