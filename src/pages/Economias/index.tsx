@@ -9,6 +9,7 @@ import { IEconomy } from "../../interfaces/IEconomy";
 import { Fragment } from "../Cadastro/styles";
 import { getSavings } from "../../services/db/firestore/savings/getSavings";
 import { getResponsibleNameById } from "../../services/db/firestore/responsible/getResponsible";
+import { getNamesForIds } from "../../utils/getNamesForId";
 
 export default function Economias() {
   const [savings, setSavings] = useState<IEconomy[]>([]);
@@ -23,22 +24,13 @@ export default function Economias() {
   }, [location.pathname]);
 
   useEffect(() => {
-    const fetchResponsibleNames = async () => {
-      const responsibleIds = savings.map(
-        (economy: IEconomy) => economy.FK_IdResponsible
-      );
-      const responsibleNamePromises = responsibleIds.map((responsibleId) =>
-        getResponsibleNameById(responsibleId)
-      );
-      const responsibleNamesArray = await Promise.all(responsibleNamePromises);
-      const responsibleNamesObj: Record<string, string> = {};
-      responsibleIds.forEach((responsibleId, index) => {
-        responsibleNamesObj[responsibleId] = responsibleNamesArray[index];
-      });
-      setResponsibleNames(responsibleNamesObj);
-    };
     if (savings.length > 0) {
-      fetchResponsibleNames();
+      getNamesForIds(
+        getResponsibleNameById,
+        savings,
+        "FK_IdResponsible",
+        setResponsibleNames
+      );
     }
   }, [savings]);
 

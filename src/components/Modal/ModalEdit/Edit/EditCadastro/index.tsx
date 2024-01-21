@@ -30,7 +30,7 @@ export default function EditCadastro({
     transaction?.FK_IdSubCategory
   );
   const [idSelectedResponsible, setIdSelectedResponsible] = useState<string>(
-    transaction?.FK_Responsible
+    transaction?.FK_IdResponsible
   );
   const [categories, setCategories] = useState<ICategory[]>([]);
   const [subCategories, setSubCategories] = useState<ISubCategory[]>([]);
@@ -67,7 +67,7 @@ export default function EditCadastro({
     const updatedFields: {
       FK_IdCategory?: string;
       FK_IdSubCategory?: string;
-      FK_Responsible?: string;
+      FK_IdResponsible?: string;
       date?: Timestamp;
       price?: number;
       title?: string;
@@ -91,8 +91,8 @@ export default function EditCadastro({
       updatedFields.FK_IdSubCategory = idSelectedSubCategory;
     }
 
-    if (transaction?.FK_Responsible !== idSelectedResponsible) {
-      updatedFields.FK_Responsible = idSelectedResponsible;
+    if (transaction?.FK_IdResponsible !== idSelectedResponsible) {
+      updatedFields.FK_IdResponsible = idSelectedResponsible;
     }
 
     return updatedFields;

@@ -4,7 +4,7 @@ import { transactionsCollectionRef } from "./getTransaction";
 export async function createTransaction(
   FK_IdCategory: string,
   FK_IdSubCategory: string,
-  FK_Responsible: string,
+  FK_IdResponsible: string,
   date: Timestamp,
   price: number,
   title: string
@@ -12,7 +12,7 @@ export async function createTransaction(
   await addDoc(transactionsCollectionRef, {
     FK_IdCategory,
     FK_IdSubCategory,
-    FK_Responsible,
+    FK_IdResponsible,
     date,
     price,
     title,
