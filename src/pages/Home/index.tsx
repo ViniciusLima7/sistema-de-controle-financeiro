@@ -4,10 +4,21 @@ import money from "../../assets/money57.svg";
 import educacaoFinanceira from "../../assets/educacao-financeira-capa.svg";
 import Footer from "../../components/Footer";
 import { Fragment } from "../Cadastro/styles";
+import { useEffect, useState } from "react";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 export default function Home() {
   const width = window.innerWidth;
-  console.log("largura", width);
+  const [name, setName] = useState<string | null>(null);
+
+  useEffect(() => {
+    onAuthStateChanged(getAuth(), (user) => {
+      if (user) {
+        setName(user.displayName);
+      }
+    });
+  }, []);
+
   return (
     <Fragment>
       <Header />
@@ -20,8 +31,8 @@ export default function Home() {
             lineHeight="37px"
             paddingTop="90px"
           >
-            Olá, <TextColor color="var(--red-500)">Vinicius Lima</TextColor>,
-            Seja bem-vindo !
+            Olá, <TextColor color="var(--red-500)">{name}</TextColor>, Seja
+            bem-vindo !
           </Text>
           <Text size="48px" lineHeight="63px" width="408px" marginLeft="100px">
             Aqui você sabe para onde seu{" "}

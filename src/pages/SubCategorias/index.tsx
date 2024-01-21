@@ -9,6 +9,7 @@ import { Fragment } from "../Cadastro/styles";
 import { ISubCategory } from "../../interfaces/ISubCategory";
 import { getSubCategories } from "../../services/db/firestore/subcategories/getSubCategories";
 import { getCategoryNameById } from "../../services/db/firestore/categories/getCategories";
+import { getNamesForIds } from "../../utils/getNamesForId";
 
 export default function SubCategorias() {
   const [subCategories, setSubCategories] = useState<ISubCategory[]>([]);
@@ -23,22 +24,13 @@ export default function SubCategorias() {
   }, [location.pathname]);
 
   useEffect(() => {
-    const fetchCategoryNames = async () => {
-      const categoryIds = subCategories.map(
-        (subCategory: ISubCategory) => subCategory.FK_IdCategory
-      );
-      const categoryNamePromises = categoryIds.map((categoryId) =>
-        getCategoryNameById(categoryId)
-      );
-      const categoryNamesArray = await Promise.all(categoryNamePromises);
-      const categoryNamesObj: Record<string, string> = {};
-      categoryIds.forEach((categoryId, index) => {
-        categoryNamesObj[categoryId] = categoryNamesArray[index];
-      });
-      setCategoryNames(categoryNamesObj);
-    };
     if (subCategories.length > 0) {
-      fetchCategoryNames();
+      getNamesForIds(
+        getCategoryNameById,
+        subCategories,
+        "FK_IdCategory",
+        setCategoryNames
+      );
     }
   }, [subCategories]);
 

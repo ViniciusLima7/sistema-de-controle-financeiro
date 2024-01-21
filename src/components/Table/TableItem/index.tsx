@@ -44,7 +44,7 @@ export default function TableItem({ title }: ITable) {
       getNamesForIds(
         getResponsibleNameById,
         transactions,
-        "FK_Responsible",
+        "FK_IdResponsible",
         setResponsibleNames
       );
     }
@@ -74,7 +74,8 @@ export default function TableItem({ title }: ITable) {
               })}
             </Row>
             <Row>
-              {responsibleNames[transaction.FK_Responsible] || "Carregando..."}
+              {responsibleNames[transaction.FK_IdResponsible] ||
+                "Carregando..."}
             </Row>
             <Row
               justifyContent="space-evenly"
